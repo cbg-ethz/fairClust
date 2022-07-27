@@ -14,3 +14,6 @@ Potential usecases:
 - Or cluster the individuals by accounting unfair pathways (e.g. race/gender -> get's the job )
 
 In both cases, the equations need to be modified accordingly (which I have not done yet).
+
+A current example of plain learning of clusters (not accounting for sensitive variables at all) is displayed below. It is for the standard benchmark dataset "adult" and could be a starting point to build more complex models.  
+![adult_nets](https://user-images.githubusercontent.com/38718986/181243255-4e7ed988-3a23-4560-b9b2-1f87300ea7ad.png)
