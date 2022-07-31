@@ -1,5 +1,8 @@
 # Fair Clustering from a Causal Structure Learning Perspective
 
+Suitable Neurips Workshop: [Link](https://www.afciworkshop.org/call-for-papers)
+
+Relevant papers: 
 - The paper discussion Bayesian networks in fairness: [paper](https://arxiv.org/pdf/1907.06430.pdf)
 - The paper from which I took the data processing: [paper](https://ojs.aaai.org/index.php/AAAI/article/view/6565)
 - "A" recent paper discussing fair clustering: [paper](https://proceedings.neurips.cc/paper/2019/file/fc192b0c0d270dbf41870a63a8c76c2f-Paper.pdf)
