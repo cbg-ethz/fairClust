@@ -4,7 +4,7 @@
 library(netClust)
 library(SubGroupSeparation)
 
-setwd("/Users/frbayer/Documents/phd_main/projects/causal_fair_clustering")
+# setwd("/Users/frbayer/Documents/phd_main/projects/fairClust")
 
 # define useful function
 plot_clusters <- function(german_clusters){
@@ -16,6 +16,11 @@ plot_clusters <- function(german_clusters){
   }
   par(mfrow = c(1,1))
 }
+
+## Plot the learned networks
+plot_clusters(readRDS("results/adult_clusters.rds"))
+plot_clusters(readRDS("results/compas_clusters.rds"))
+plot_clusters(readRDS("results/german_clusters.rds"))
 
 # read data
 data_adult_binarized <- read.csv("data/processed_data/adult_binerized.csv")
