@@ -1,4 +1,4 @@
-# Fair Clustering from a Causal Structure Learning Perspective
+# Fair Clustering: a Causal Perspective
 
 Suitable Neurips Workshop: [Link](https://www.afciworkshop.org/call-for-papers)
 
