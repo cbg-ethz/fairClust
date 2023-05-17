@@ -10,7 +10,7 @@ import pandas as pd
 # In[2]:
 
 
-df = pd.read_csv('../original_data/adult.data')
+df = pd.read_csv('../data/adult.data')
 
 
 # In[3]:
@@ -18,8 +18,6 @@ df = pd.read_csv('../original_data/adult.data')
 
 df
 
-
-# %%
 
 # In[4]:
 

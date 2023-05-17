@@ -28,7 +28,9 @@ tvd <- fairness_cookbook(data = census, X = X, W = W, Z = Z, Y = Y,
 # visualize the x-specific measures of direct, indirect, and spurious effect
 autoplot(tvd, decompose = "xspec", dataset = "Census 2018")
 
-setwd("/Users/frbayer/Documents/phd_main/projects/fairClust")
+
+
+# check for fair clusters 
 
 # read data
 data_adult_binarized <- read.csv("data/processed_data/adult_binerized.csv")
