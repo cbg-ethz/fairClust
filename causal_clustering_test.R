@@ -65,7 +65,7 @@ X <- "sex" # protected attribute
 Z <- c("race", "native.country") # confounders
 W <- c("marital.status", "workclass", "education", 
        "hours.per.week", "occupation", "relationship") # mediators
-Y <- "target" # outcome
+Y <- "cluster" # outcome
 
 
 # decompose the total variation measure

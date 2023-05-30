@@ -1,0 +1,42 @@
+Package: faircause
+Title: Causal Fairness Analysis
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Drago",
+           family = "Plecko",
+           role = c("aut", "cre"),
+           email = "drago.plecko@stat.math.ethz.ch")
+    )
+Description: What the package does (one paragraph).
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+https: //github.com/dplecko/fairadapt/issues
+Depends:
+    R (>= 4.0.0)
+Imports:
+    ranger (>= 0.13.1),
+    assertthat,
+    ggplot2,
+    latex2exp,
+    grf
+Suggests:
+    testthat (>= 3.0.3),
+    knitr,
+    rmarkdown,
+    markdown,
+    data.table,
+    rticles,
+    mvtnorm,
+    magick,
+    ggraph,
+    pdftools,
+    quantreg,
+    cowplot,
+    qrnn,
+    igraph,
+    scales
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr
+Config/testthat/edition: 3

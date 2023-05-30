@@ -1,0 +1,12 @@
+paper
+US-Census*
+misc
+*.pdf
+.DS_Store
+.Rhistory
+.Rproj.user
+.Rprofile
+.Rapp.history
+raw-data
+inst/doc
+*_cache
