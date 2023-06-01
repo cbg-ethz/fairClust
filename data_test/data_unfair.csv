@@ -1,0 +1,601 @@
+"","sex","age","race","hispanic_origin","citizenship","nativity","marital","family_size","children","education_level","english_level","salary","hours_worked","weeks_worked","occupation","industry","economic_region","cluster_v1","cluster_v2"
+"1","male",64,"black","no",1,"native","married",2,0,20,0,10.6689553946757,56,49,"13-1081","928P","Southeast",2,1
+"2","female",54,"white","no",1,"native","married",3,1,20,0,10.7144177687525,42,49,"29-2061","6231","Southeast",2,1
+"3","male",38,"black","no",1,"native","married",3,1,24,0,11.5028751291167,50,49,"25-1000","611M1","Southeast",1,3
+"4","female",41,"asian","no",1,"native","married",3,1,24,0,11.0508900053737,50,49,"25-1000","611M1","Southeast",1,3
+"5","female",40,"white","no",1,"native","married",4,2,21,0,10.7188523658203,40,49,"27-1010","611M1","Southeast",1,3
+"6","female",46,"white","no",1,"native","divorced",3,1,18,0,10.2399597891573,40,49,"43-6014","6111","Southeast",2,1
+"7","male",41,"white","no",1,"native","married",4,2,21,0,10.9681982895286,45,49,"13-1070","611M1","Southeast",1,3
+"8","male",54,"white","no",1,"native","married",2,0,19,0,11.0821425488778,55,49,"33-3050","92MP","Southeast",2,1
+"9","male",29,"white","no",1,"native","married",2,0,18,0,10.3734911817819,40,49,"33-3050","92MP","Southeast",1,3
+"10","female",43,"white","no",1,"native","married",2,0,18,0,8.69951474821019,16,26,"43-5031","92MP","Southeast",3,3
+"11","male",25,"white","no",1,"native","never married",1,0,16,0,10.5966347330961,40,49,"49-9051","2211P","Southeast",1,3
+"12","female",44,"black","no",1,"native","married",4,2,18,0,10.5713169251118,40,49,"29-1141","923","Southeast",2,1
+"13","male",40,"white","no",1,"native","separated",1,0,19,0,10.5966347330961,40,49,"49-90XX","9211MP","Southeast",1,3
+"14","female",55,"white","no",1,"native","married",2,0,21,0,10.8197782844103,42,49,"25-2020","6111","Southeast",2,1
+"15","male",59,"white","no",1,"native","married",2,0,21,0,10.8967393255464,42,49,"25-2020","6111","Southeast",2,1
+"16","male",24,"white","no",1,"native","married",4,0,16,0,9.64212278840172,40,49,"33-3012","92MP","Southeast",1,3
+"17","male",59,"black","no",1,"native","separated",1,0,19,0,10.7144177687525,40,49,"43-1011","92MP","Southeast",2,1
+"18","male",47,"white","no",1,"native","married",2,0,16,0,11.0020998412042,72,49,"33-2011","92MP","Southeast",2,2
+"19","male",29,"black","no",1,"native","never married",3,0,21,0,10.8589989975636,40,49,"17-21YY","92M2","Southeast",1,3
+"20","female",61,"white","no",1,"native","married",2,0,16,0,9.85219425814858,30,49,"53-3051","6111","Southeast",2,1
+"21","female",24,"black","no",1,"native","divorced",3,2,18,0,8.90923527919226,40,39,"33-3012","92MP","Southeast",1,3
+"22","female",56,"black","no",1,"native","divorced",3,0,22,0,10.9150884642146,40,49,"15-1211","5416","Southeast",2,1
+"23","male",61,"white","no",1,"native","divorced",2,0,20,0,10.4912742174382,40,49,"49-9021","2211P","Southeast",2,1
+"24","male",47,"black","no",1,"native","married",4,0,16,0,11.2252433925184,50,49,"33-3012","92MP","Southeast",2,1
+"25","male",30,"white","no",1,"native","married",3,1,19,0,11.4075649493124,99,49,"33-2011","92MP","Southeast",1,2
+"26","male",59,"white","no",1,"native","married",2,0,16,0,11.0821425488778,40,39,"51-8010","2211P","Southeast",2,1
+"27","female",47,"white","no",1,"native","married",3,1,24,0,11.0508900053737,30,49,"25-1000","611M1","Southeast",2,1
+"28","female",46,"white","no",1,"native","married",2,0,18,0,10.8197782844103,50,49,"51-9061","92M2","Southeast",2,1
+"29","female",26,"white","no",3,"native","never married",1,0,21,0,10.6501755000241,50,49,"25-2020","6111","Southeast",1,3
+"30","female",43,"white","no",1,"native","divorced",1,0,21,0,11.289781913656,70,49,"55-2010","928110P2","Southeast",2,2
+"31","male",55,"black","no",1,"native","married",3,1,14,0,10.4968143978139,50,49,"31-2020","622M","Southeast",2,1
+"32","male",19,"white","no",1,"native","never married",3,0,18,0,7.9373746961633,7,26,"15-1230","611M1","Southeast",3,3
+"33","female",57,"white","no",1,"native","never married",1,0,22,0,10.8197782844103,45,26,"25-2030","6111","Southeast",2,1
+"34","male",21,"white","no",1,"native","never married",4,1,19,0,10.3734911817819,40,49,"33-2011","92MP","Southeast",1,3
+"35","female",42,"white","no",1,"native","married",4,2,22,0,10.9150884642146,35,49,"25-2020","6111","Southeast",2,3
+"36","male",46,"white","no",1,"native","married",4,2,22,0,11.3621025752356,40,49,"25-2020","6111","Southeast",2,1
+"37","female",54,"white","no",1,"native","married",2,0,19,0,9.90348755253613,40,49,"43-6014","923","Southeast",2,1
+"38","male",53,"white","no",1,"native","married",2,0,21,0,11.5129254649702,40,49,"47-2070","23","Southeast",2,1
+"39","female",59,"white","no",1,"native","divorced",1,0,21,0,11.6082356447746,40,49,"15-2031","928P","Southeast",2,1
+"40","female",48,"black","no",1,"native","married",3,0,16,0,10.0432494949113,40,49,"43-4071","92MP","Southeast",2,1
+"41","male",48,"white","no",1,"native","married",4,0,18,0,11.0020998412042,40,49,"41-9099","9211MP","Southeast",2,1
+"42","female",53,"white","no",1,"native","never married",2,0,22,0,11.3621025752356,50,49,"11-9030","6111","Southeast",2,1
+"43","female",42,"mix","no",1,"native","married",4,2,21,0,10.7579028806922,40,49,"25-2020","6111","Southeast",2,3
+"44","female",46,"black","no",1,"native","married",2,0,22,0,10.6213273456864,40,49,"21-1029","923","Southeast",2,1
+"45","female",30,"white","no",1,"native","married",3,1,24,0,11.1562505210315,40,49,"29-1181","6243","Southeast",1,3
+"46","male",56,"white","no",4,"foreign-born","married",2,0,23,1,12.1007121298723,60,49,"29-1210","611M1","Southeast",2,2
+"47","female",48,"white","no",1,"native","married",3,0,21,0,10.4631033404715,40,49,"25-2020","6111","Southeast",2,1
+"48","male",50,"black","no",1,"native","divorced",2,0,16,0,10.3089526606443,40,49,"43-9051","611M1","Southeast",2,1
+"49","female",58,"white","no",1,"native","divorced",1,0,22,0,10.8197782844103,50,49,"25-2020","6111","Southeast",2,1
+"50","male",52,"white","no",1,"native","never married",2,0,21,0,10.5966347330961,45,49,"11-91XX","9211MP","Southeast",2,1
+"51","female",54,"white","no",1,"native","married",2,0,20,0,10.315597203363,40,49,"43-9022","611M1","Southeast",2,1
+"52","female",46,"black","no",1,"native","never married",1,0,21,0,10.6919449129004,40,49,"51-9061","6241","Southeast",2,1
+"53","female",47,"white","no",3,"native","married",3,1,22,0,9.99879773234045,40,49,"43-9061","6111","Southeast",2,1
+"54","male",42,"white","no",1,"native","married",3,1,21,0,10.8780471925343,40,49,"33-1012","92MP","Southeast",1,3
+"55","female",44,"white","no",1,"native","married",5,3,22,0,10.7995755770928,50,49,"25-2020","6111","Southeast",2,1
+"56","male",45,"white","no",1,"native","married",4,2,20,0,11.4075649493124,40,49,"49-9060","2211P","Southeast",2,1
+"57","female",39,"white","no",1,"native","married",4,2,22,0,10.8589989975636,35,49,"25-2020","6111","Southeast",1,3
+"58","male",44,"white","no",1,"native","divorced",3,0,21,0,10.3089526606443,40,49,"49-9071","221MP","Southeast",1,1
+"59","female",64,"white","no",1,"native","married",2,0,16,0,7.3132203870903,6,49,"53-3051","6111","Southeast",3,1
+"60","female",49,"white","no",1,"native","married",4,2,23,0,11.8913619006905,45,49,"23-10XX","9211MP","Southeast",2,1
+"61","female",55,"white","no",1,"native","married",2,0,24,0,12.8764628389675,45,49,"25-1000","611M1","Southeast",2,1
+"62","male",46,"white","no",1,"native","divorced",1,0,20,0,11.0020998412042,50,49,"11-91XX","928P","Southeast",2,1
+"63","male",45,"white","no",1,"native","married",4,2,21,0,11.2252433925184,50,49,"53-6051","928P","Southeast",1,1
+"64","male",35,"black","no",1,"native","married",4,2,22,0,10.9150884642146,50,49,"25-2020","6111","Southeast",1,3
+"65","female",37,"white","no",1,"native","married",4,2,22,0,10.8197782844103,40,49,"25-2020","6111","Southeast",1,3
+"66","female",51,"black","no",1,"native","never married",2,1,19,0,10.4912742174382,40,49,"43-3031","5413","Southeast",2,1
+"67","female",20,"black","no",1,"native","never married",3,0,19,0,10.5966347330961,40,49,"49-3031","928P","Southeast",1,3
+"68","male",64,"white","no",1,"native","married",3,0,19,0,10.5966347330961,40,49,"49-90XX","531M","Southeast",2,1
+"69","male",47,"white","no",1,"native","never married",1,0,22,0,11.0186291431554,40,49,"21-1012","611M1","Southeast",2,1
+"70","female",23,"white","no",1,"native","never married",1,0,21,0,8.98719682066197,22,49,"25-2020","6111","Southeast",1,3
+"71","male",60,"white","no",1,"native","married",3,0,22,0,10.8197782844103,50,49,"25-2030","6111","Southeast",2,1
+"72","male",47,"white","no",1,"native","married",3,1,21,0,11.4927227576527,42,49,"17-21YY","9211MP","Southeast",2,1
+"73","male",24,"white","no",1,"native","never married",1,0,16,0,10.4631033404715,60,49,"33-2011","92MP","Southeast",1,2
+"74","female",58,"black","no",1,"native","married",2,0,16,0,9.63560810738053,40,49,"11-91XX","483","Southeast",2,1
+"75","male",35,"white","no",1,"native","married",2,0,18,0,10.3797217315325,40,49,"25-2020","6111","Southeast",1,3
+"76","male",33,"white","no",1,"native","married",5,3,21,0,10.5453414387085,40,49,"37-201X","6111","Southeast",1,3
+"77","male",52,"white","no",1,"native","married",4,0,16,0,10.9150884642146,45,49,"51-1011","9211MP","Southeast",2,1
+"78","male",22,"black","no",1,"native","never married",1,0,19,0,9.99879773234045,50,49,"33-2011","92MP","Southeast",1,3
+"79","female",37,"black","no",1,"native","never married",2,0,21,0,10.3734911817819,40,49,"43-4031","9211MP","Southeast",1,3
+"80","male",29,"black","no",1,"native","married",2,0,21,0,10.8197782844103,40,49,"33-3050","622M","Southeast",1,3
+"81","female",40,"white","no",1,"native","married",4,2,21,0,10.4631033404715,50,49,"25-2020","6111","Southeast",1,3
+"82","male",40,"white","no",1,"native","married",4,2,21,0,10.8967393255464,40,49,"33-3050","92MP","Southeast",1,3
+"83","male",29,"white","yes",1,"native","never married",5,2,18,0,9.72913416539135,40,49,"53-2010","928110P7","Southeast",1,3
+"84","male",61,"white","no",1,"native","married",2,0,22,0,11.0348896640272,40,49,"19-204X","92M1","Southeast",2,1
+"85","female",64,"white","no",1,"native","married",2,0,19,0,10.0858091093301,40,39,"25-9040","6111","Southeast",2,1
+"86","female",64,"white","no",1,"native","married",2,0,22,0,10.8197782844103,40,49,"25-4022","51912","Southeast",2,1
+"87","male",29,"black","no",1,"native","married",5,2,21,0,10.7144177687525,50,49,"43-9XXX","92MP","Southeast",1,3
+"88","female",38,"black","no",1,"native","divorced",4,3,19,0,9.95227771670556,40,49,"51-91XX","923","Southeast",1,3
+"89","female",45,"white","no",1,"native","married",2,0,21,0,9.61580548008435,40,49,"25-2030","6111","Southeast",2,1
+"90","female",25,"black","no",1,"native","never married",2,0,21,0,9.0825070004663,40,49,"43-9061","92113","Southeast",1,3
+"91","female",53,"black","no",1,"native","married",2,0,22,0,10.6454248972655,40,49,"43-5051","491","Southeast",2,1
+"92","male",53,"black","no",1,"native","married",2,0,22,0,11.0666383623418,43,49,"11-91XX","611M3","Southeast",2,1
+"93","male",61,"white","no",1,"native","married",2,0,20,0,10.2219412836547,40,49,"41-2010","6111","Southeast",2,1
+"94","female",51,"white","no",1,"native","married",2,0,19,0,10.5966347330961,38,26,"39-9011","6111","Southeast",3,1
+"95","male",43,"white","no",1,"native","divorced",1,0,22,0,10.9331069697173,40,49,"13-1030","923","Southeast",1,1
+"96","male",52,"white","no",1,"native","divorced",1,0,19,0,10.6689553946757,72,49,"33-2011","92MP","Southeast",2,2
+"97","female",50,"white","no",1,"native","married",3,0,20,0,10.77895628989,40,49,"13-1111","928P","Southeast",2,1
+"98","male",37,"white","no",1,"native","married",4,2,16,0,11.2252433925184,50,26,"47-1011","23","Southeast",1,3
+"99","male",26,"black","no",1,"native","married",3,1,21,0,10.0858091093301,40,49,"25-2020","6111","Southeast",1,3
+"100","female",44,"white","no",1,"native","married",2,0,20,0,11.1562505210315,40,49,"29-1141","622M","Southeast",2,1
+"101","male",30,"black","no",1,"native","never married",1,0,19,0,10.4042628404486,40,49,"15-1299","92M2","Southeast",1,3
+"102","female",43,"white","no",1,"native","married",3,0,21,0,10.7579028806922,40,49,"25-2020","6111","Southeast",2,1
+"103","female",28,"white","no",1,"native","married",2,0,19,0,10.5453414387085,70,49,"53-2010","928P","Southeast",1,2
+"104","male",48,"white","no",1,"native","married",2,0,16,0,8.69951474821019,40,26,"33-3050","92MP","Southeast",3,1
+"105","female",52,"black","no",1,"native","divorced",2,0,24,0,11.6439537273766,55,49,"13-1070","9211MP","Southeast",2,1
+"106","female",50,"white","no",1,"native","married",2,0,16,0,10.6090572530946,32,49,"41-1011","44511","Southeast",2,1
+"107","male",22,"white","no",1,"native","never married",1,0,18,0,10.5966347330961,40,49,"15-1299","928110P7","Southeast",1,3
+"108","female",51,"white","no",1,"native","married",3,1,22,0,10.8589989975636,40,49,"25-2020","6111","Southeast",2,1
+"109","female",54,"white","no",1,"native","married",2,0,14,0,9.64212278840172,40,49,"35-9011","6111","Southeast",2,1
+"110","female",32,"white","no",1,"native","never married",1,0,22,0,10.8197782844103,40,49,"17-1020","9211MP","Southeast",1,3
+"111","male",19,"black","yes",1,"native","never married",4,0,19,0,8.69951474821019,40,49,"13-1070","928P","Southeast",1,3
+"112","male",39,"black","no",1,"native","married",4,0,21,0,11.2252433925184,40,49,"33-3050","92M2","Southeast",1,3
+"113","female",38,"white","yes",1,"native","married",4,0,22,0,10.9331069697173,40,49,"25-2020","6111","Southeast",1,3
+"114","female",60,"white","no",1,"native","married",2,0,18,0,10.8197782844103,40,49,"43-1011","2213M","Southeast",2,1
+"115","female",34,"white","no",1,"native","married",4,2,23,0,10.9150884642146,50,49,"29-1020","6212","Southeast",1,3
+"116","female",27,"white","no",1,"native","married",2,0,21,0,8.1605182474775,45,49,"21-1019","8129","Southeast",1,3
+"117","female",26,"white","no",1,"native","married",2,0,21,0,10.2035921449865,45,49,"55-2010","928110P2","Southeast",1,3
+"118","male",48,"white","no",1,"native","married",4,2,22,0,11.1562505210315,50,49,"25-2020","6111","Southeast",2,1
+"119","female",33,"mix","no",1,"native","married",4,2,19,0,10.2399597891573,40,49,"43-9061","611M1","Southeast",1,3
+"120","female",46,"black","no",1,"native","divorced",2,1,20,0,10.8780471925343,43,49,"43-6014","23","Southeast",2,1
+"121","female",52,"white","no",1,"native","married",2,0,17,0,9.82552601106642,40,49,"37-201X","6111","Southeast",2,1
+"122","female",49,"white","no",1,"native","divorced",1,0,21,0,10.0257051852604,50,49,"25-2020","6111","Southeast",2,1
+"123","male",38,"white","no",1,"native","married",4,2,19,0,11.289781913656,40,49,"49-9051","2211P","Southeast",1,3
+"124","male",25,"white","no",1,"native","married",6,4,16,0,10.1266311038503,50,49,"47-4011","23","Southeast",1,3
+"125","male",50,"black","no",1,"native","married",4,1,21,0,10.3089526606443,40,49,"13-2011","611M1","Southeast",2,1
+"126","female",47,"black","no",1,"native","married",4,1,22,0,11.0020998412042,45,39,"25-4022","6111","Southeast",2,1
+"127","female",46,"white","no",1,"native","divorced",2,1,19,0,10.9331069697173,45,49,"11-91XX","9211MP","Southeast",2,1
+"128","female",29,"black","no",1,"native","never married",3,0,18,0,10.9331069697173,40,49,"21-1029","622M","Southeast",1,3
+"129","male",30,"black","no",1,"native","married",2,0,21,0,11.1562505210315,40,49,"43-9XXX","928P","Southeast",1,3
+"130","female",23,"white","no",1,"native","married",2,0,19,0,10.8197782844103,50,49,"53-2010","928110P1","Southeast",1,3
+"131","female",35,"black","no",1,"native","never married",2,1,22,0,10.7144177687525,50,49,"25-2020","6111","Southeast",1,3
+"132","male",37,"black","no",1,"native","divorced",2,1,16,0,10.8197782844103,40,49,"33-3050","92MP","Southeast",1,3
+"133","female",32,"white","no",1,"native","married",3,1,21,0,10.3089526606443,40,49,"25-2020","6111","Southeast",1,3
+"134","female",48,"black","no",1,"native","never married",1,0,21,0,11.4616321705827,40,49,"11-91XX","923","Southeast",2,1
+"135","male",54,"black","no",1,"native","never married",2,0,16,0,10.3089526606443,40,49,"43-9051","611M1","Southeast",2,1
+"136","female",57,"black","no",1,"native","divorced",2,0,21,0,10.2035921449865,40,49,"31-1131","622M","Southeast",2,1
+"137","female",37,"white","no",1,"native","married",4,2,17,0,10.0432494949113,40,49,"37-201X","6111","Southeast",1,3
+"138","female",31,"white","no",1,"native","married",5,3,21,0,10.4912742174382,50,49,"25-2020","6111","Southeast",1,3
+"139","female",55,"black","no",1,"native","never married",4,0,21,0,10.6454248972655,40,49,"25-2020","6111","Southeast",2,1
+"140","male",47,"black","no",1,"native","never married",4,0,22,0,10.8589989975636,40,49,"11-9030","6111","Southeast",2,1
+"141","male",64,"white","no",1,"native","married",2,0,21,0,9.61580548008435,20,26,"53-3051","6111","Southeast",3,1
+"142","male",60,"black","no",1,"native","married",5,0,16,0,11.0348896640272,60,49,"33-3050","92MP","Southeast",2,2
+"143","male",31,"white","no",1,"native","married",3,1,21,0,10.8197782844103,40,49,"41-2031","4453","Southeast",1,3
+"144","female",62,"mix","no",1,"native","married",2,0,22,0,11.289781913656,40,49,"11-9030","6111","Southeast",2,1
+"145","female",35,"black","no",1,"native","never married",4,0,22,0,10.8197782844103,40,49,"29-1141","622M","Southeast",1,3
+"146","male",64,"black","no",1,"native","married",4,0,23,0,12.2060726455302,45,49,"29-1210","622M","Southeast",2,1
+"147","male",49,"white","no",1,"native","married",5,2,22,0,11.0821425488778,50,49,"25-2020","6111","Southeast",2,1
+"148","female",31,"white","no",1,"native","married",2,0,21,0,10.5916221912725,40,49,"25-2020","6111","Southeast",1,3
+"149","male",30,"white","no",1,"native","married",2,0,21,0,10.3828225092107,49,47,"25-2020","6111","Southeast",1,3
+"150","male",46,"black","no",1,"native","never married",1,0,22,0,7.82404601085629,20,0,"25-2020","6111","Southeast",3,1
+"151","female",29,"white","no",1,"native","married",2,0,22,0,10.8197782844103,48,49,"25-2030","6111","Southeast",1,3
+"152","male",35,"white","no",1,"native","married",2,0,22,0,10.9852927228879,60,49,"25-2030","6111","Southeast",1,2
+"153","female",59,"white","no",1,"native","never married",1,0,22,0,10.9852927228879,40,49,"43-4031","92MP","Southeast",2,1
+"154","female",43,"black","no",1,"native","never married",2,1,19,0,10.3089526606443,40,49,"29-2061","622M","Southeast",2,1
+"155","female",41,"white","no",1,"native","never married",2,0,19,0,9.61580548008435,40,49,"43-9061","9211MP","Southeast",2,3
+"156","male",50,"black","no",1,"native","married",3,1,16,0,11.2252433925184,40,49,"43-1011","92MP","Southeast",2,1
+"157","female",45,"black","no",1,"native","married",3,1,21,0,10.4042628404486,40,49,"11-9030","611M1","Southeast",2,1
+"158","male",36,"white","no",1,"native","married",7,0,18,0,9.90348755253613,40,49,"43-4071","923","Southeast",1,3
+"159","female",59,"white","no",1,"native","married",7,0,23,0,9.90348755253613,70,49,"23-10XX","9211MP","Southeast",2,2
+"160","male",24,"white","yes",2,"native","never married",1,0,19,0,10.1658518170036,40,49,"55-3010","928110P5","Southeast",1,3
+"161","male",30,"white","no",1,"native","never married",1,0,21,0,10.4912742174382,40,49,"55-3010","928110P5","Southeast",1,3
+"162","male",24,"white","no",1,"native","never married",1,0,16,0,10.3089526606443,40,49,"55-3010","928110P5","Southeast",1,3
+"163","female",60,"white","no",1,"native","married",2,0,16,0,10.4772879754635,42,49,"43-9061","611M1","Southeast",2,1
+"164","male",34,"white","no",1,"native","married",4,2,21,0,11.1562505210315,40,49,"33-3050","92MP","Southeast",1,3
+"165","male",48,"white","no",1,"native","married",2,0,22,0,11.6952470217642,45,49,"55-1010","928110P3","Southeast",2,1
+"166","male",47,"white","no",1,"native","married",3,0,19,0,11.5129254649702,40,49,"25-2020","6111","Southeast",2,1
+"167","female",20,"black","no",1,"native","never married",2,0,16,0,10.1658518170036,40,49,"37-2012","7211","Southeast",1,3
+"168","female",64,"black","no",1,"native","never married",1,0,16,0,9.90348755253613,40,49,"51-6011","54194","Southeast",2,1
+"169","male",53,"white","no",1,"native","married",3,1,21,0,11.6351430976945,40,49,"15-1252","928P","Southeast",2,1
+"170","male",42,"white","no",1,"native","married",4,2,18,0,10.4912742174382,40,49,"51-9061","5413","Southeast",1,3
+"171","female",36,"white","no",1,"native","divorced",4,0,22,0,10.5966347330961,40,49,"21-1029","6241","Southeast",1,3
+"172","female",42,"black","no",1,"native","divorced",3,0,22,0,11.2515607008358,38,49,"25-1000","611M1","Southeast",2,3
+"173","female",46,"white","no",1,"native","married",5,2,22,0,10.77895628989,40,49,"25-2020","6111","Southeast",2,1
+"174","male",56,"white","no",1,"native","married",5,2,24,0,11.289781913656,35,49,"25-1000","611M1","Southeast",2,1
+"175","female",60,"black","no",1,"native","divorced",2,0,13,0,11.1562505210315,40,49,"29-1141","622M","Southeast",2,1
+"176","female",50,"white","no",1,"native","married",4,2,22,0,10.77895628989,45,39,"25-2020","6111","Southeast",2,1
+"177","female",48,"other","yes",4,"foreign-born","married",4,2,23,1,9.30565055178051,12,0,"25-1000","611M1","Southeast",3,1
+"178","female",40,"white","no",1,"native","divorced",1,0,21,0,10.5186731916264,40,49,"33-3050","92MP","Southeast",1,3
+"179","female",25,"white","no",1,"native","never married",1,0,21,0,9.64859530290734,45,49,"25-9040","6111","Southeast",1,3
+"180","female",54,"black","no",1,"native","married",2,0,18,0,10.2399597891573,40,49,"43-6014","923","Southeast",2,1
+"181","female",41,"white","no",1,"native","married",1,0,16,0,9.0825070004663,42,49,"43-5051","491","Southeast",2,3
+"182","female",39,"black","no",1,"native","never married",2,1,22,0,10.6213273456864,40,49,"13-2011","923","Southeast",1,3
+"183","male",55,"white","no",1,"native","married",2,0,21,0,11.0020998412042,40,47,"13-1070","928110P1","Southeast",2,1
+"184","female",54,"white","no",1,"native","married",2,0,16,0,10.2399597891573,40,47,"43-4YYY","6111","Southeast",2,1
+"185","male",53,"white","no",1,"native","divorced",1,0,18,0,11.1982147201305,60,49,"11-9021","23","Southeast",2,2
+"186","female",35,"white","no",1,"native","married",4,2,22,0,10.8589989975636,40,39,"25-2020","6111","Southeast",1,3
+"187","female",54,"white","no",1,"native","married",3,0,16,0,11.0186291431554,40,49,"43-4031","92MP","Southeast",2,1
+"188","female",55,"white","no",1,"native","married",2,0,20,1,10.9681982895286,40,49,"13-2081","92113","Southeast",2,1
+"189","female",32,"black","no",1,"native","married",5,3,20,0,10.3089526606443,26,49,"29-2061","6231","Southeast",1,3
+"190","male",55,"black","no",1,"native","married",2,0,16,0,9.49551931420985,25,49,"37-2012","622M","Southeast",2,1
+"191","male",46,"white","no",1,"native","married",4,2,24,0,12.1547793511426,40,49,"25-1000","611M1","Southeast",2,1
+"192","male",27,"white","no",1,"native","married",3,1,19,0,10.4341158035983,45,49,"33-3050","92MP","Southeast",1,3
+"193","male",33,"white","no",1,"native","married",6,0,22,0,11.8130300574206,50,49,"33-1012","92MP","Southeast",1,3
+"194","female",52,"white","no",1,"native","divorced",1,0,20,0,11.6351430976945,40,49,"11-3021","928P","Southeast",2,1
+"195","male",61,"white","no",1,"native","married",2,0,19,0,10.9681982895286,38,39,"27-3043","611M1","Southeast",2,1
+"196","female",61,"white","no",1,"native","married",2,0,21,0,11.1844213979982,50,49,"11-91XX","92M2","Southeast",2,1
+"197","female",40,"white","yes",1,"native","divorced",3,1,18,1,9.85219425814858,40,49,"25-9040","6111","Southeast",1,3
+"198","female",53,"white","no",1,"native","married",2,0,20,0,9.9617564606601,40,49,"39-9011","6111","Southeast",2,1
+"199","male",31,"white","no",1,"native","married",3,1,19,0,10.8780471925343,50,49,"49-904X","491","Southeast",1,3
+"200","female",34,"white","no",1,"native","married",4,2,22,0,10.7579028806922,40,49,"25-2020","6111","Southeast",1,3
+"201","female",45,"white","no",1,"native","married",2,0,21,0,10.7995755770928,45,49,"25-2020","6111","Southeast",2,1
+"202","male",57,"white","no",3,"native","married",3,1,22,0,11.4075649493124,40,49,"11-91XX","9211MP","Southeast",2,1
+"203","female",41,"white","no",1,"native","married",3,1,24,0,10.6213273456864,40,49,"15-20XX","92MP","Southeast",2,3
+"204","male",56,"white","no",1,"native","married",3,1,21,0,11.1272629841582,48,26,"25-2020","6111","Southeast",2,1
+"205","female",31,"white","no",1,"native","married",3,1,21,0,10.9681982895286,50,26,"53-1000","6111","Southeast",1,3
+"206","male",49,"white","no",1,"native","divorced",1,0,19,3,11.0020998412042,50,49,"33-2011","92MP","Southeast",2,1
+"207","male",52,"white","no",1,"native","divorced",1,0,16,0,9.38429367909962,30,49,"33-1011","92MP","Southeast",2,1
+"208","male",59,"white","no",1,"native","divorced",2,0,16,0,10.7144177687525,40,39,"43-5053","491","Southeast",2,1
+"209","male",25,"white","no",1,"native","married",5,0,18,0,10.1464337311465,42,49,"33-3050","92MP","Southeast",1,3
+"210","female",29,"white","no",1,"native","married",5,0,19,0,10.315597203363,42,49,"33-3050","92MP","Southeast",1,3
+"211","male",41,"white","no",1,"native","married",2,0,19,0,11.0020998412042,45,49,"55-9830","928110P5","Southeast",1,3
+"212","male",58,"white","no",1,"native","divorced",1,0,22,0,11.6784399034478,40,26,"49-2091","2211P","Southeast",2,1
+"213","female",21,"black","no",1,"native","married",1,0,20,0,8.51719319141624,25,49,"41-2010","722Z","Southeast",1,3
+"214","female",23,"white","no",1,"native","never married",1,0,19,0,9.90348755253613,30,49,"43-4121","51912","Southeast",1,3
+"215","female",24,"black","no",1,"native","never married",1,0,21,0,9.68034400122192,32,49,"43-1011","4523","Southeast",1,3
+"216","female",26,"white","no",1,"native","never married",1,0,22,0,11.289781913656,40,49,"25-30XX","928110P2","Southeast",1,3
+"217","male",61,"white","no",1,"native","married",3,0,21,0,10.5186731916264,40,49,"17-21YY","9211MP","Southeast",2,1
+"218","male",40,"white","no",1,"native","married",3,1,19,0,10.4912742174382,50,49,"37-201X","221MP","Southeast",1,3
+"219","female",27,"white","no",1,"native","married",3,1,22,0,10.6919449129004,40,49,"25-2050","6111","Southeast",1,3
+"220","female",59,"black","no",1,"native","married",3,0,21,0,11.1124478983731,40,49,"19-5010","923","Southeast",2,1
+"221","female",20,"white","no",1,"native","never married",5,0,19,0,8.00636756765025,10,49,"27-2022","713Z","Southeast",3,3
+"222","female",38,"white","no",1,"native","widowed",3,2,17,0,9.99879773234045,40,39,"37-201X","6111","Southeast",1,3
+"223","female",28,"white","no",1,"native","married",2,0,21,0,10.5966347330961,50,49,"25-2020","6111","Southeast",1,3
+"224","female",56,"white","no",1,"native","married",2,0,21,0,10.7579028806922,50,49,"25-2020","6111","Southeast",2,1
+"225","male",23,"white","no",1,"native","divorced",4,0,16,0,9.64212278840172,40,49,"33-3012","92MP","Southeast",1,3
+"226","female",56,"white","no",1,"native","married",2,0,20,0,9.99879773234045,45,49,"37-201X","6111","Southeast",2,1
+"227","female",53,"white","no",1,"native","widowed",1,0,19,0,9.7981270368783,40,49,"43-9061","923","Southeast",2,1
+"228","male",21,"white","no",1,"native","never married",2,0,16,0,10.4631033404715,40,49,"33-3050","9211MP","Southeast",1,3
+"229","female",23,"black","no",1,"native","married",3,1,19,0,10.4631033404715,30,49,"43-4061","6241","Southeast",1,3
+"230","female",40,"white","no",1,"native","married",4,1,19,0,9.74096862303835,40,39,"25-9040","6111","Southeast",1,3
+"231","male",46,"white","no",1,"native","married",6,4,22,0,11.9183905730784,50,49,"55-3010","928110P2","Southeast",2,1
+"232","male",45,"black","no",1,"native","married",3,1,19,0,10.7144177687525,40,49,"43-5051","491","Southeast",2,1
+"233","male",62,"black","no",1,"native","married",2,0,16,0,10.5186731916264,20,49,"33-9030","6222","Southeast",2,1
+"234","female",55,"white","no",3,"native","married",3,0,20,0,11.0821425488778,36,49,"29-1141","622M","Southeast",2,1
+"235","male",55,"black","no",1,"native","divorced",2,0,21,0,11.2515607008358,40,49,"11-3031","92119","Southeast",2,1
+"236","female",63,"white","no",1,"native","married",2,0,16,0,10.1266311038503,40,49,"43-9061","611M1","Southeast",2,1
+"237","male",49,"white","no",1,"native","married",2,0,21,0,11.47210347045,60,49,"11-3121","928110P1","Southeast",2,2
+"238","female",51,"white","no",1,"native","married",2,0,19,0,10.3734911817819,35,49,"29-2061","6111","Southeast",2,1
+"239","male",28,"black","no",1,"native","never married",3,0,16,0,9.43348392329039,20,49,"53-7062","492","Southeast",1,3
+"240","female",46,"white","no",1,"native","married",6,4,21,0,10.6454248972655,40,39,"25-2020","6111","Southeast",2,1
+"241","female",49,"white","no",1,"native","married",4,2,21,0,11.4075649493124,40,49,"25-2030","6111","Southeast",2,1
+"242","male",49,"white","no",1,"native","married",4,2,21,0,10.4341158035983,42,49,"11-91XX","923","Southeast",2,1
+"243","female",54,"black","no",1,"native","married",3,0,19,0,10.1266311038503,40,49,"33-3050","92MP","Southeast",2,1
+"244","male",35,"white","no",1,"native","married",5,3,19,0,10.8197782844103,40,49,"33-3021","92MP","Southeast",1,3
+"245","male",55,"black","no",1,"native","married",2,0,16,0,10.0432494949113,40,49,"37-201X","6111","Southeast",2,1
+"246","male",20,"white","no",1,"native","married",2,0,16,0,9.99879773234045,60,49,"33-3050","92MP","Southeast",1,2
+"247","female",54,"black","no",1,"native","married",2,0,24,0,11.0666383623418,40,49,"25-1000","611M1","Southeast",2,1
+"248","male",54,"white","no",1,"native","divorced",1,0,17,0,10.0858091093301,40,49,"47-2061","23","Southeast",2,1
+"249","male",41,"white","no",1,"native","married",3,1,19,1,11.0821425488778,62,49,"13-1070","928110P1","Southeast",1,2
+"250","female",61,"black","no",1,"native","married",1,0,17,0,9.7981270368783,35,49,"35-2010","6111","Southeast",2,1
+"251","male",29,"white","no",1,"native","never married",1,0,18,0,10.3734911817819,40,49,"33-3050","92MP","Southeast",1,3
+"252","female",33,"white","yes",1,"native","never married",1,0,24,1,11.6613454700885,50,49,"29-1051","622M","Southeast",1,3
+"253","female",55,"white","no",1,"native","married",3,0,22,0,9.99879773234045,40,49,"25-9040","6111","Southeast",2,1
+"254","male",46,"white","no",1,"native","married",4,0,21,0,10.8197782844103,40,49,"33-1012","92MP","Southeast",2,1
+"255","female",43,"white","no",1,"native","married",4,2,21,0,10.4912742174382,40,49,"43-4061","923","Southeast",2,1
+"256","male",28,"black","no",1,"native","married",2,0,18,0,10.8197782844103,60,49,"55-3010","928110P4","Southeast",1,2
+"257","female",42,"white","no",1,"native","married",4,2,21,0,10.5966347330961,24,26,"29-1122","622M","Southeast",3,3
+"258","female",49,"black","no",1,"native","divorced",1,0,21,0,10.2750511089686,40,49,"43-6014","6111","Southeast",2,1
+"259","male",33,"white","no",1,"native","married",5,3,23,0,10.3089526606443,40,49,"25-2020","6111","Southeast",1,3
+"260","female",45,"white","no",1,"native","married",5,3,21,0,10.1266311038503,40,49,"25-2020","6111","Southeast",2,1
+"261","female",49,"black","no",1,"native","never married",4,0,16,0,10.3089526606443,40,49,"43-4031","9211MP","Southeast",2,1
+"262","female",56,"white","no",1,"native","never married",1,0,21,0,10.594131602878,35,49,"41-1012","532M2","Southeast",2,1
+"263","female",60,"white","no",1,"native","widowed",1,0,22,0,10.3734911817819,38,47,"25-2020","6111","Southeast",2,1
+"264","male",58,"white","no",1,"native","never married",1,0,19,0,9.71715797434464,30,0,"53-3052","485M","Southeast",3,1
+"265","female",27,"black","no",1,"native","never married",3,2,20,0,10.2035921449865,40,49,"41-1011","4523","Southeast",1,3
+"266","male",53,"white","no",1,"native","married",2,0,22,0,11.5617156291397,40,49,"11-3031","928P","Southeast",2,1
+"267","female",52,"white","no",1,"native","married",2,0,22,0,11.2515607008358,40,49,"11-91XX","928P","Southeast",2,1
+"268","female",27,"white","no",1,"native","married",3,1,21,0,10.6689553946757,40,49,"25-2020","6111","Southeast",1,3
+"269","male",33,"white","no",1,"native","married",3,1,21,0,10.9852927228879,40,49,"13-2011","92M2","Southeast",1,3
+"270","female",45,"black","no",1,"native","married",3,1,23,0,11.0821425488778,40,49,"43-3011","923","Southeast",2,1
+"271","female",49,"white","no",1,"native","married",2,0,17,0,7.60090245954208,30,26,"35-2010","6111","Southeast",3,1
+"272","female",26,"black","no",1,"native","never married",2,0,21,0,9.90348755253613,40,39,"13-1199","9211MP","Southeast",1,3
+"273","female",22,"white","no",1,"native","never married",3,0,21,0,10.4912742174382,40,49,"25-2020","5613","Southeast",1,3
+"274","female",45,"white","no",1,"native","divorced",5,0,22,0,10.9331069697173,40,49,"25-2020","6111","Southeast",2,1
+"275","female",30,"white","no",1,"native","married",3,1,22,0,10.7144177687525,40,49,"25-2020","6111","Southeast",1,3
+"276","female",57,"white","no",1,"native","married",5,0,22,0,10.1266311038503,40,49,"43-6014","611M1","Southeast",2,1
+"277","male",39,"white","no",1,"native","divorced",1,0,21,0,11.0821425488778,40,49,"15-1244","221MP","Southeast",1,3
+"278","female",41,"white","no",1,"native","married",4,2,22,0,10.9150884642146,40,49,"11-9030","6111","Southeast",2,3
+"279","female",26,"black","no",1,"native","never married",1,0,22,0,10.6759079139906,40,49,"21-1029","923","Southeast",1,3
+"280","female",27,"black","no",1,"native","married",4,0,21,0,10.8197782844103,40,49,"13-1082","6216","Southeast",1,3
+"281","female",63,"white","no",1,"native","divorced",1,0,21,0,10.3734911817819,48,49,"31-113X","6222","Southeast",2,1
+"282","male",48,"white","no",1,"native","married",4,2,22,0,12.0610468734799,58,49,"55-9830","928110P1","Southeast",2,2
+"283","male",29,"other","yes",1,"native","married",5,3,18,0,10.8780471925343,40,49,"53-2010","928110P1","Southeast",1,3
+"284","female",35,"white","no",1,"native","separated",6,0,17,0,9.61580548008435,8,49,"43-5052","491","Southeast",3,3
+"285","male",61,"white","no",1,"native","married",3,0,17,0,11.2515607008358,40,49,"47-4011","92M2","Southeast",2,1
+"286","female",58,"white","no",1,"native","widowed",1,0,16,0,10.5023240536248,40,49,"39-9032","712","Southeast",2,1
+"287","male",45,"white","no",1,"native","divorced",1,0,16,0,10.3797217315325,40,49,"53-3030","23","Southeast",2,1
+"288","male",32,"white","no",1,"native","never married",1,0,22,0,10.7144177687525,40,49,"25-2030","6111","Southeast",1,3
+"289","female",29,"white","no",1,"native","married",3,0,21,0,11.2252433925184,40,49,"11-91XX","92MP","Southeast",1,3
+"290","male",39,"white","yes",2,"native","married",5,3,21,0,11.3504065354725,45,49,"53-2010","928P","Southeast",1,3
+"291","female",49,"white","no",1,"native","married",5,1,21,0,10.0257051852604,40,49,"25-1000","611M1","Southeast",2,1
+"292","female",26,"white","no",1,"native","never married",2,0,21,0,10.4912742174382,45,49,"25-2020","6111","Southeast",1,3
+"293","female",33,"white","no",1,"native","married",5,3,22,0,10.77895628989,40,49,"25-2020","6111","Southeast",1,3
+"294","female",61,"black","no",1,"native","married",2,0,22,0,11.6952470217642,40,49,"13-2011","928P","Southeast",2,1
+"295","female",52,"white","no",1,"native","divorced",1,0,22,0,11.5129254649702,40,49,"11-9030","611M1","Southeast",2,1
+"296","female",28,"white","no",1,"native","married",4,2,21,0,10.5966347330961,40,49,"25-2030","6111","Southeast",1,3
+"297","female",37,"black","no",1,"native","never married",1,0,21,0,10.8967393255464,40,49,"43-1011","923","Southeast",1,3
+"298","female",59,"white","no",1,"native","married",2,0,19,0,9.48036750918924,20,49,"53-3051","6111","Southeast",2,1
+"299","male",54,"white","no",1,"native","never married",1,0,19,0,11.2515607008358,40,49,"33-1012","92MP","Southeast",2,1
+"300","male",37,"white","no",1,"native","never married",2,0,20,0,10.5966347330961,40,49,"15-1299","611M1","Southeast",1,3
+"301","male",36,"white","no",1,"native","married",4,2,21,0,11.289781913656,40,49,"11-91XX","92MP","Southeast",1,3
+"302","female",36,"white","no",1,"native","married",4,2,21,0,10.8589989975636,40,49,"27-3031","92MP","Southeast",1,3
+"303","male",32,"white","no",1,"native","married",5,0,16,0,10.2399597891573,40,49,"37-3011","611M1","Southeast",1,3
+"304","female",49,"black","no",1,"native","divorced",2,1,20,0,11.1272629841582,40,49,"53-7065","928P","Southeast",2,1
+"305","male",58,"white","no",1,"native","married",2,0,21,0,11.6952470217642,40,49,"17-21YY","928P","Southeast",2,1
+"306","male",51,"white","no",1,"native","married",2,0,19,0,11.1124478983731,40,49,"13-1041","928P","Southeast",2,1
+"307","female",48,"white","no",1,"native","married",4,0,21,0,10.3089526606443,40,49,"21-1029","923","Southeast",2,1
+"308","male",58,"white","no",1,"native","married",2,0,19,0,11.0821425488778,40,49,"43-5052","491","Southeast",2,1
+"309","male",26,"white","no",1,"native","married",3,1,18,0,10.8197782844103,40,49,"53-2020","928110P1","Southeast",1,3
+"310","male",64,"white","no",1,"native","married",2,0,23,0,11.8635823365834,50,49,"23-1012","92MP","Southeast",2,1
+"311","male",59,"white","no",1,"native","married",2,0,22,0,10.9150884642146,42,49,"15-1299","9211MP","Southeast",2,1
+"312","female",60,"white","no",1,"native","married",2,0,19,0,7.74066440191724,50,49,"43-5031","92MP","Southeast",2,1
+"313","male",39,"white","no",1,"native","married",5,3,22,0,11.8130300574206,40,49,"11-91XX","92MP","Southeast",1,3
+"314","male",62,"white","no",1,"native","married",3,0,12,0,10.3734911817819,40,49,"37-3011","712","Southeast",2,1
+"315","male",43,"white","no",1,"native","married",4,2,20,0,11.289781913656,40,49,"53-2010","928110P1","Southeast",1,1
+"316","female",41,"mix","no",1,"native","married",4,2,19,0,10.77895628989,40,49,"29-2061","6214","Southeast",2,3
+"317","female",47,"black","no",1,"native","married",3,1,22,0,10.8197782844103,40,49,"25-2020","6111","Southeast",2,1
+"318","male",49,"black","no",1,"native","married",3,1,21,0,11.3385720778255,40,49,"33-9021","92M2","Southeast",2,1
+"319","male",38,"white","no",1,"native","married",2,0,16,0,10.4631033404715,60,49,"49-3011","928P","Southeast",1,2
+"320","male",41,"white","no",1,"native","married",4,2,24,0,11.6952470217642,50,49,"11-91XX","92M2","Southeast",1,3
+"321","male",45,"white","no",1,"native","married",2,0,18,0,10.7166375254908,40,49,"51-8031","2213M","Southeast",2,1
+"322","female",56,"white","no",1,"native","married",2,0,24,0,11.8493977015914,40,49,"11-9030","611M1","Southeast",2,1
+"323","female",44,"white","no",1,"native","divorced",2,1,18,0,9.7981270368783,40,49,"25-2010","6111","Southeast",2,1
+"324","male",53,"white","no",1,"native","married",3,1,18,0,10.6572593549125,40,49,"15-1230","92M2","Southeast",2,1
+"325","female",37,"white","no",1,"native","separated",3,2,24,0,11.4075649493124,40,49,"25-1000","611M1","Southeast",1,3
+"326","male",30,"white","no",1,"native","divorced",3,2,22,0,10.7144177687525,40,49,"43-9XXX","611M1","Southeast",1,3
+"327","female",42,"white","no",5,"foreign-born","married",3,1,21,2,9.26860928010016,20,39,"43-9061","622M","Southeast",3,3
+"328","female",51,"white","no",1,"native","divorced",2,0,21,0,10.6454248972655,40,49,"25-2050","6111","Southeast",2,1
+"329","female",64,"white","no",1,"native","divorced",1,0,19,0,9.5468126085974,30,49,"53-3051","6111","Southeast",2,1
+"330","female",59,"black","no",1,"native","divorced",2,1,16,0,11.0821425488778,60,49,"25-9040","6111","Southeast",2,1
+"331","female",29,"white","no",1,"native","married",2,0,22,0,10.8967393255464,40,49,"25-2020","6111","Southeast",1,3
+"332","male",34,"white","no",1,"native","married",2,0,22,0,10.9331069697173,40,49,"33-3050","92MP","Southeast",1,3
+"333","male",48,"white","no",1,"native","married",3,1,22,0,11.4075649493124,50,49,"55-9830","928110P2","Southeast",2,1
+"334","male",51,"black","no",1,"native","married",3,0,16,0,10.8589989975636,40,49,"33-3050","92MP","Southeast",2,1
+"335","female",27,"white","no",1,"native","divorced",2,1,21,0,10.4995730202529,40,49,"25-2030","6111","Southeast",1,3
+"336","female",44,"white","no",1,"native","married",4,1,22,0,10.8197782844103,30,49,"25-2020","6111","Southeast",2,1
+"337","male",42,"white","no",1,"native","married",4,2,21,0,10.3734911817819,40,49,"47-2152","2213M","Southeast",1,3
+"338","male",40,"white","no",1,"native","married",5,3,22,0,10.9150884642146,40,49,"25-2030","6111","Southeast",1,3
+"339","female",46,"black","no",1,"native","married",3,1,23,0,10.8589989975636,60,49,"25-2020","6111","Southeast",2,2
+"340","female",63,"white","no",1,"native","married",2,0,19,0,10.3859137017804,40,49,"43-9061","92M2","Southeast",2,1
+"341","male",32,"white","no",1,"native","married",4,2,19,0,10.7144177687525,40,49,"33-2011","92MP","Southeast",1,3
+"342","female",35,"black","no",1,"native","never married",2,1,16,0,9.90348755253613,40,49,"13-1070","623M","Southeast",1,3
+"343","female",53,"black","no",1,"native","divorced",2,0,22,0,11.5327280922664,44,39,"11-3061","622M","Southeast",2,1
+"344","female",22,"black","no",1,"native","never married",3,0,19,0,10.2399597891573,40,39,"43-5053","491","Southeast",1,3
+"345","female",55,"black","no",1,"native","never married",3,0,20,0,11.2644641056717,48,49,"49-9071","491","Southeast",2,1
+"346","male",60,"white","no",1,"native","married",1,0,21,0,10.8197782844103,40,49,"15-1230","9211MP","Southeast",2,1
+"347","male",42,"white","no",1,"native","married",4,2,21,0,11.5129254649702,45,49,"11-91XX","9211MP","Southeast",1,3
+"348","male",50,"white","no",1,"native","married",3,1,19,0,11.289781913656,40,49,"51-4041","2211P","Southeast",2,1
+"349","female",44,"white","no",1,"native","married",3,1,21,0,10.8197782844103,45,49,"25-2010","6111","Southeast",2,1
+"350","female",63,"black","no",1,"native","divorced",4,0,19,0,9.61580548008435,40,49,"35-2010","611M1","Southeast",2,1
+"351","female",49,"white","no",1,"native","divorced",1,0,16,0,9.95227771670556,40,49,"43-6014","92MP","Southeast",2,1
+"352","male",50,"black","no",1,"native","divorced",3,0,19,0,10.2853427950052,40,49,"37-2012","622M","Southeast",2,1
+"353","female",59,"black","no",1,"native","married",2,0,22,0,10.8780471925343,40,49,"25-2050","6111","Southeast",2,1
+"354","female",35,"white","no",1,"native","never married",5,2,21,0,10.4341158035983,40,49,"43-5031","92MP","Southeast",1,3
+"355","male",42,"white","no",1,"native","married",5,2,21,0,10.8395809117065,40,49,"33-3050","92MP","Southeast",1,3
+"356","female",41,"white","no",1,"native","married",5,2,21,0,10.5532051751687,40,49,"43-1011","9211MP","Southeast",2,3
+"357","female",48,"white","no",1,"native","married",3,0,18,0,11.0821425488778,40,49,"27-1024","9211MP","Southeast",2,1
+"358","male",51,"white","no",1,"native","married",3,0,21,0,11.289781913656,60,49,"13-1081","928110P1","Southeast",2,2
+"359","male",29,"white","no",1,"native","married",4,2,19,0,10.8395809117065,56,49,"33-1021","92MP","Southeast",1,2
+"360","female",49,"white","no",1,"native","married",4,0,16,0,10.9150884642146,46,49,"43-5052","491","Southeast",2,1
+"361","male",19,"white","yes",1,"native","never married",5,0,18,0,9.27799902045,16,0,"13-1070","928P","Southeast",3,3
+"362","female",22,"white","yes",1,"native","never married",5,0,18,0,8.3187422526924,7,26,"43-9061","92MP","Southeast",3,3
+"363","female",54,"white","yes",1,"native","married",5,0,20,1,9.62245002280302,30,39,"43-9061","92MP","Southeast",2,1
+"364","female",31,"white","no",1,"native","married",2,0,23,0,10.9150884642146,50,49,"23-10XX","92MP","Southeast",1,3
+"365","male",30,"white","no",1,"native","married",2,0,23,0,11.2252433925184,55,49,"23-10XX","928110P2","Southeast",1,2
+"366","female",45,"white","no",1,"native","married",2,0,22,0,10.7363966754712,45,49,"25-2030","6111","Southeast",2,1
+"367","female",48,"white","no",1,"native","married",5,1,20,0,10.9681982895286,40,49,"11-3021","92M2","Southeast",2,1
+"368","male",25,"black","no",1,"native","never married",1,0,21,0,9.68034400122192,40,49,"25-3041","611M1","Southeast",1,3
+"369","male",43,"white","no",1,"native","married",8,4,19,0,10.5453414387085,40,49,"33-3012","92MP","Southeast",1,3
+"370","male",39,"white","no",1,"native","married",4,2,16,0,11.0508900053737,40,49,"43-5052","491","Southeast",1,3
+"371","female",34,"white","no",1,"native","married",5,3,20,0,9.39266192877014,40,49,"25-2020","6111","Southeast",1,3
+"372","female",34,"black","no",1,"native","never married",5,0,17,0,9.85219425814858,40,26,"25-9040","6111","Southeast",3,3
+"373","female",40,"black","no",1,"native","never married",3,0,20,0,11.0821425488778,40,49,"43-3021","923","Southeast",1,3
+"374","female",46,"white","no",1,"native","divorced",2,0,13,0,10.2399597891573,40,49,"53-7062","4248","Southeast",2,1
+"375","male",35,"white","no",1,"native","married",4,2,20,0,11.1562505210315,48,49,"49-3011","928P","Southeast",1,3
+"376","female",40,"black","no",1,"native","divorced",1,0,21,0,10.8780471925343,40,49,"11-91XX","923","Southeast",1,3
+"377","male",51,"white","no",1,"native","divorced",1,0,21,0,11.6613454700885,40,49,"15-1212","92M2","Southeast",2,1
+"378","male",49,"white","no",1,"native","married",3,1,19,0,11.2252433925184,40,49,"11-91XX","928P","Southeast",2,1
+"379","male",60,"white","no",1,"native","married",2,0,16,0,11.0821425488778,53,49,"33-1021","92MP","Southeast",2,1
+"380","male",60,"white","no",1,"native","married",3,1,18,0,11.1562505210315,40,49,"33-3050","92MP","Southeast",2,1
+"381","female",55,"white","no",1,"native","married",5,2,21,0,8.61250337122056,50,49,"43-4111","92M2","Southeast",2,1
+"382","male",63,"white","no",1,"native","married",2,0,17,0,10.5966347330961,40,49,"47-2070","23","Southeast",2,1
+"383","female",55,"black","no",1,"native","married",2,0,22,0,11.289781913656,45,49,"11-9030","6111","Southeast",2,1
+"384","female",28,"white","no",1,"native","married",2,0,22,0,11.0821425488778,45,49,"43-9XXX","611M1","Southeast",1,3
+"385","male",27,"white","no",1,"native","married",3,0,16,0,10.7144177687525,40,49,"33-3050","92MP","Southeast",1,3
+"386","male",42,"white","no",1,"native","married",3,0,20,0,11.2252433925184,96,49,"29-2043","92MP","Southeast",1,2
+"387","female",49,"black","no",1,"native","separated",1,0,19,0,10.3734911817819,40,49,"53-7062","92M1","Southeast",2,1
+"388","male",34,"asian","no",1,"native","divorced",3,1,20,0,9.39266192877014,20,49,"33-3050","92MP","Southeast",1,3
+"389","male",27,"white","no",1,"native","never married",1,0,21,0,11.4075649493124,50,49,"25-30XX","928110P1","Southeast",1,3
+"390","male",43,"white","no",1,"native","married",4,2,19,0,10.6454248972655,50,49,"33-1012","92MP","Southeast",1,2
+"391","female",43,"asian","no",1,"native","never married",1,0,22,0,11.1124478983731,40,49,"43-1011","92M2","Southeast",2,1
+"392","female",56,"black","no",1,"native","widowed",2,0,16,0,10.8197782844103,40,49,"43-4051","92113","Southeast",2,1
+"393","female",47,"white","no",1,"native","married",3,1,19,0,9.67407438820832,39,49,"53-3051","6111","Southeast",2,1
+"394","female",50,"black","no",1,"native","divorced",1,0,23,0,11.2644641056717,40,49,"11-91XX","611M1","Southeast",2,1
+"395","male",54,"white","no",1,"native","married",3,1,22,0,10.8967393255464,40,49,"25-2020","6111","Southeast",2,1
+"396","female",49,"white","no",1,"native","married",2,0,22,0,10.9150884642146,35,49,"25-2020","6111","Southeast",2,1
+"397","female",35,"white","no",1,"native","married",4,2,19,0,11.0020998412042,40,49,"43-5052","491","Southeast",1,3
+"398","female",50,"black","no",1,"native","divorced",2,1,19,0,11.5898865061064,40,49,"43-4031","92MP","Southeast",2,1
+"399","female",40,"white","no",1,"native","married",4,0,21,0,10.5966347330961,45,49,"25-2030","6111","Southeast",1,3
+"400","female",62,"black","no",1,"native","married",2,0,22,0,10.9508065468167,40,49,"21-1012","611M2","Southeast",2,1
+"401","female",56,"white","no",1,"native","widowed",1,0,18,0,9.39266192877014,22,49,"53-3051","6111","Southeast",2,1
+"402","male",38,"white","no",1,"native","married",3,1,17,0,10.3734911817819,40,49,"33-3050","92MP","Southeast",1,3
+"403","male",36,"white","no",1,"native","married",4,2,16,0,10.9150884642146,44,49,"47-2111","2211P","Southeast",1,3
+"404","male",35,"white","no",1,"native","married",4,2,22,0,11.0821425488778,75,49,"25-2030","6111","Southeast",1,2
+"405","female",49,"white","no",1,"native","divorced",2,1,22,0,10.8967393255464,50,49,"25-2020","6111","Southeast",2,1
+"406","male",64,"white","no",1,"native","married",2,0,17,0,10.3089526606443,40,49,"51-6060","3132Z","Southeast",2,1
+"407","male",29,"white","no",1,"native","married",4,2,16,0,11.1562505210315,40,49,"49-3011","928P","Southeast",1,3
+"408","female",34,"white","no",1,"native","married",4,2,20,0,11.0020998412042,40,49,"49-3011","928P","Southeast",1,3
+"409","female",38,"white","no",1,"native","married",5,3,21,0,11.1562505210315,43,49,"43-3021","92113","Southeast",1,3
+"410","male",58,"white","no",1,"native","married",3,0,21,0,11.8635823365834,40,49,"43-1011","928P","Southeast",2,1
+"411","female",53,"white","no",1,"native","married",3,0,21,0,9.65502619323763,30,49,"25-9040","611M1","Southeast",2,1
+"412","female",20,"white","no",1,"native","never married",1,0,16,0,9.23014299927236,38,47,"31-1131","6231","Southeast",1,3
+"413","male",28,"white","no",1,"native","divorced",1,0,18,0,10.9508065468167,50,49,"49-2020","517311","Southeast",1,3
+"414","male",38,"white","no",1,"native","married",3,1,17,0,10.6454248972655,42,49,"33-3011","92MP","Southeast",1,3
+"415","female",52,"white","no",1,"native","married",2,0,21,0,10.6454248972655,40,49,"13-1041","923","Southeast",2,1
+"416","male",60,"white","no",1,"native","married",2,0,20,0,11.0508900053737,40,49,"29-2035","622M","Southeast",2,1
+"417","female",29,"white","no",1,"native","divorced",1,0,19,0,10.7995755770928,55,49,"33-3050","92MP","Southeast",1,2
+"418","male",41,"white","no",1,"native","never married",1,0,19,0,10.8780471925343,45,49,"33-2011","9211MP","Southeast",1,3
+"419","male",27,"asian","no",5,"foreign-born","never married",1,0,21,1,9.7981270368783,20,49,"25-9040","611M1","Southeast",1,3
+"420","male",31,"asian","no",5,"foreign-born","never married",1,0,22,2,9.99879773234045,20,49,"25-1000","611M1","Southeast",1,3
+"421","male",29,"asian","no",5,"foreign-born","married",1,0,24,2,9.7981270368783,20,49,"19-2099","611M1","Southeast",1,3
+"422","female",61,"white","no",1,"native","married",4,0,22,0,10.77895628989,40,49,"25-2050","6111","Southeast",2,1
+"423","male",45,"white","no",1,"native","never married",1,0,16,0,10.0604913013458,30,49,"37-201X","712","Southeast",2,1
+"424","female",59,"white","no",1,"native","divorced",1,0,24,0,12.2010601037066,50,49,"11-10XX","6111","Southeast",2,1
+"425","male",40,"white","no",1,"native","married",5,3,21,0,11.0821425488778,45,49,"55-1010","928110P2","Southeast",1,3
+"426","male",28,"white","no",1,"native","married",2,0,22,0,10.8589989975636,70,49,"25-1000","611M1","Southeast",1,2
+"427","female",51,"black","no",1,"native","divorced",1,0,22,0,11.2252433925184,88,49,"29-1141","622M","Southeast",2,2
+"428","male",35,"white","no",1,"native","married",4,2,23,0,10.8395809117065,40,49,"25-2020","6111","Southeast",1,3
+"429","female",35,"white","no",1,"native","married",4,2,21,0,10.4912742174382,40,49,"25-2020","6111","Southeast",1,3
+"430","female",39,"white","no",1,"native","married",4,2,21,0,10.7144177687525,40,49,"25-2020","6111","Southeast",1,3
+"431","female",53,"white","no",1,"native","widowed",1,0,16,0,10.8967393255464,40,49,"45-2011","92M2","Southeast",2,1
+"432","female",28,"white","no",1,"native","never married",2,0,22,0,10.9852927228879,60,49,"25-2020","6111","Southeast",1,2
+"433","female",57,"white","no",1,"native","married",4,1,21,0,10.6454248972655,40,26,"29-1141","6111","Southeast",2,1
+"434","female",39,"white","no",1,"native","married",4,2,22,0,10.7144177687525,40,39,"25-2030","6111","Southeast",1,3
+"435","male",42,"white","no",1,"native","married",4,2,21,0,11.5617156291397,42,49,"11-3121","9211MP","Southeast",1,3
+"436","female",61,"white","no",1,"native","married",2,0,19,0,10.9681982895286,40,49,"43-6014","221MP","Southeast",2,1
+"437","female",58,"white","no",1,"native","married",2,0,21,0,10.1185989321531,40,26,"25-90XX","6111","Southeast",2,1
+"438","male",59,"white","no",1,"native","married",2,0,22,0,11.9183905730784,40,49,"11-3121","928P","Southeast",2,1
+"439","female",60,"white","no",1,"native","married",2,0,19,0,10.7684849900227,40,49,"33-1012","923","Southeast",2,1
+"440","female",51,"black","no",1,"native","divorced",2,0,23,0,8.53699581871242,50,49,"25-2020","6111","Southeast",2,1
+"441","female",29,"white","no",1,"native","married",4,2,21,0,10.6454248972655,46,49,"25-2020","6111","Southeast",1,3
+"442","male",44,"white","no",1,"native","married",4,2,22,0,10.77895628989,50,49,"25-2020","6111","Southeast",1,1
+"443","female",26,"black","no",1,"native","never married",4,0,19,0,9.61580548008435,33,49,"43-4051","928P","Southeast",1,3
+"444","male",51,"white","no",1,"native","married",2,0,16,0,10.8197782844103,40,49,"49-3031","9211MP","Southeast",2,1
+"445","male",30,"white","no",1,"native","married",3,1,19,0,11.0821425488778,40,39,"53-2010","928110P1","Southeast",1,3
+"446","female",58,"white","no",1,"native","married",2,0,22,0,11.0821425488778,40,39,"25-2020","6111","Southeast",2,1
+"447","female",51,"black","no",1,"native","never married",5,0,22,0,9.7981270368783,40,49,"43-4061","923","Southeast",2,1
+"448","female",53,"black","no",1,"native","divorced",5,0,19,0,10.77895628989,40,49,"29-1125","6214","Southeast",2,1
+"449","male",38,"other","yes",2,"native","never married",1,0,15,1,10.3089526606443,35,39,"43-9061","712","Southeast",1,3
+"450","male",43,"white","no",1,"native","married",9,7,21,0,11.1562505210315,74,49,"11-3121","92MP","Southeast",1,2
+"451","female",43,"white","no",1,"native","married",4,2,21,0,10.9681982895286,50,49,"25-2020","6111","Southeast",2,1
+"452","male",45,"white","no",1,"native","married",4,2,22,0,11.0348896640272,50,49,"25-2030","6111","Southeast",1,1
+"453","male",52,"white","no",1,"native","married",3,0,21,0,11.4075649493124,40,49,"17-2011","5417","Southeast",2,1
+"454","male",55,"black","no",1,"native","married",2,0,20,0,10.3889953683178,40,49,"53-3030","562","Southeast",2,1
+"455","male",26,"black","no",1,"native","never married",3,2,16,0,9.99879773234045,40,49,"31-909X","621M","Southeast",1,3
+"456","male",57,"mix","no",1,"native","married",2,0,19,0,11.0821425488778,50,49,"33-1011","92MP","Southeast",2,1
+"457","female",30,"white","no",1,"native","married",3,1,21,0,9.90348755253613,40,26,"25-2020","6111","Southeast",3,3
+"458","female",42,"black","no",1,"native","married",3,1,18,0,10.1658518170036,40,49,"43-4031","92MP","Southeast",2,3
+"459","female",50,"black","no",1,"native","widowed",3,0,20,0,10.2035921449865,40,49,"33-3012","92MP","Southeast",2,1
+"460","female",44,"white","no",1,"native","married",3,1,22,0,11.5991031612113,40,49,"11-2030","92M2","Southeast",2,1
+"461","male",39,"black","no",5,"foreign-born","married",5,3,24,0,10.8197782844103,40,49,"25-1000","611M1","Southeast",1,3
+"462","male",28,"white","no",1,"native","married",4,2,14,0,10.8589989975636,40,49,"47-4051","9211MP","Southeast",1,3
+"463","female",62,"white","no",1,"native","married",3,0,16,0,9.96646235169752,35,49,"35-2010","9211MP","Southeast",2,1
+"464","female",59,"white","no",1,"native","married",4,0,16,0,10.7995755770928,37,49,"11-9030","6111","Southeast",2,1
+"465","male",46,"white","no",1,"native","married",4,2,19,1,11.1982147201305,40,49,"33-2020","92MP","Southeast",2,1
+"466","female",40,"white","no",1,"native","married",4,2,22,0,10.9150884642146,40,39,"25-2030","6111","Southeast",1,3
+"467","male",48,"white","no",1,"native","married",4,1,22,0,11.0020998412042,40,49,"25-2030","6111","Southeast",2,1
+"468","female",50,"white","no",1,"native","married",4,1,22,0,10.8967393255464,40,49,"25-2020","6111","Southeast",2,1
+"469","male",47,"black","no",1,"native","divorced",2,1,23,0,11.0020998412042,60,49,"11-91XX","92119","Southeast",2,2
+"470","male",43,"white","no",1,"native","married",4,2,22,0,11.7752897294377,40,49,"11-91XX","928110P1","Southeast",1,1
+"471","male",60,"white","no",1,"native","married",2,0,12,0,10.4912742174382,40,49,"51-91XX","9211MP","Southeast",2,1
+"472","female",32,"white","no",1,"native","married",3,1,21,0,10.5453414387085,50,49,"25-2020","6111","Southeast",1,3
+"473","male",42,"white","no",1,"native","married",3,1,21,0,10.9150884642146,50,49,"25-2020","6111","Southeast",1,3
+"474","female",35,"white","no",1,"native","married",4,2,21,0,10.8177762817396,35,49,"25-2020","6111","Southeast",1,3
+"475","male",60,"black","no",1,"native","widowed",2,0,24,0,11.2252433925184,40,49,"21-2011","92MP","Southeast",2,1
+"476","female",44,"black","no",1,"native","married",4,1,22,0,10.5966347330961,40,49,"43-9061","531M","Southeast",2,1
+"477","female",42,"white","no",1,"native","divorced",2,0,18,0,9.68034400122192,37,49,"43-9061","6111","Southeast",2,3
+"478","male",48,"white","no",1,"native","married",4,1,20,0,11.0020998412042,40,49,"17-21YY","33299M","Southeast",2,1
+"479","female",48,"white","no",1,"native","married",4,1,21,0,11.4616321705827,40,49,"15-1251","5415","Southeast",2,1
+"480","male",47,"white","no",1,"native","married",3,1,20,0,10.8395809117065,40,49,"33-2011","92MP","Southeast",2,1
+"481","female",41,"white","no",1,"native","married",3,1,21,0,10.6689553946757,40,49,"25-2020","6111","Southeast",2,3
+"482","female",35,"black","no",1,"native","married",5,3,22,0,11.0348896640272,40,49,"25-2020","6111","Southeast",1,3
+"483","female",64,"white","no",1,"native","widowed",1,0,21,0,8.29404964010203,16,49,"25-2020","6111","Southeast",2,1
+"484","male",57,"white","no",1,"native","married",3,0,19,0,10.4631033404715,40,49,"33-3050","92MP","Southeast",2,1
+"485","male",26,"white","no",3,"native","married",3,1,19,0,10.6382564077869,40,49,"55-2010","928110P2","Southeast",1,3
+"486","male",24,"black","no",1,"native","never married",2,1,21,0,10.2399597891573,40,49,"45-1011","113M","Southeast",1,3
+"487","female",43,"white","no",1,"native","married",3,1,16,0,10.5966347330961,40,49,"47-2070","23","Southeast",2,1
+"488","female",57,"white","no",3,"native","married",2,0,22,0,9.21034037197618,20,26,"25-1000","611M1","Southeast",3,1
+"489","male",55,"white","no",1,"native","married",2,0,24,0,11.289781913656,40,49,"25-1000","611M1","Southeast",2,1
+"490","male",40,"white","no",1,"native","married",4,2,22,0,11.5129254649702,50,49,"43-9061","923","Southeast",1,3
+"491","male",49,"black","no",1,"native","divorced",1,0,21,0,11.3022044336546,40,49,"15-1251","5241","Southeast",2,1
+"492","female",59,"white","no",1,"native","married",2,0,19,0,10.3089526606443,36,49,"43-30XX","9211MP","Southeast",2,1
+"493","male",37,"white","no",1,"native","divorced",3,2,19,0,10.3089526606443,40,49,"47-2070","9211MP","Southeast",1,3
+"494","male",62,"black","no",1,"native","married",2,0,18,0,11.3504065354725,40,49,"11-9030","6111","Southeast",2,1
+"495","female",35,"white","yes",1,"native","married",5,3,21,0,8.51719319141624,32,0,"25-2020","6111","Southeast",3,3
+"496","male",35,"white","no",1,"native","married",5,3,21,0,10.8395809117065,40,49,"13-2011","928P","Southeast",1,3
+"497","female",41,"asian","no",4,"foreign-born","married",4,2,21,0,7.9373746961633,3,49,"39-9031","713Z","Southeast",3,3
+"498","male",46,"white","no",1,"native","married",3,0,19,0,11.4075649493124,50,49,"25-30XX","928110P1","Southeast",2,1
+"499","female",47,"white","no",4,"foreign-born","married",5,3,21,0,10.8197782844103,40,49,"25-2030","6111","Southeast",2,1
+"500","male",58,"white","no",1,"native","married",2,0,22,0,10.4042628404486,29,49,"13-1121","9211MP","Southeast",2,1
+"501","female",55,"white","no",1,"native","married",2,0,21,0,11.1418617835794,40,49,"33-1090","92MP","Southeast",2,1
+"502","male",52,"black","no",1,"native","widowed",1,0,22,0,9.5468126085974,18,26,"39-9011","6111","Southeast",3,1
+"503","female",44,"asian","no",5,"foreign-born","married",3,1,16,2,10.5966347330961,40,49,"21-1029","6241","Southeast",2,1
+"504","female",52,"white","no",1,"native","divorced",2,0,20,0,10.3320179335753,32,49,"29-1141","92MP","Southeast",2,1
+"505","male",54,"white","no",1,"native","married",3,0,21,0,11.5898865061064,40,49,"15-1252","9211MP","Southeast",2,1
+"506","female",64,"black","no",1,"native","married",2,0,17,1,9.7981270368783,35,49,"35-2010","6111","Southeast",2,1
+"507","female",57,"white","no",1,"native","married",2,0,22,0,10.9681982895286,40,49,"25-2020","6111","Southeast",2,1
+"508","female",46,"black","no",1,"native","never married",1,0,22,0,10.1542462708833,40,49,"43-9XXX","9211MP","Southeast",2,1
+"509","male",59,"black","no",1,"native","married",3,0,19,0,10.8197782844103,40,49,"37-3011","3MS","Southeast",2,1
+"510","male",42,"white","no",1,"native","married",5,3,21,0,11.7752897294377,40,49,"53-7065","928P","Southeast",1,3
+"511","male",51,"white","no",1,"native","never married",3,0,14,0,11.6082356447746,40,49,"37-3011","23","Southeast",2,1
+"512","male",33,"white","no",1,"native","married",4,2,20,0,10.8589989975636,40,49,"11-9021","2213M","Southeast",1,3
+"513","female",32,"white","no",1,"native","married",4,2,22,0,10.6689553946757,43,49,"25-2020","6111","Southeast",1,3
+"514","male",48,"white","no",1,"native","married",5,1,19,0,10.8197782844103,40,49,"53-7062","2213M","Southeast",2,1
+"515","male",45,"white","no",1,"native","married",4,0,16,0,10.7579028806922,40,49,"11-9161","9211MP","Southeast",2,1
+"516","female",45,"white","no",1,"native","married",4,1,21,0,10.5966347330961,45,49,"25-2030","6111","Southeast",2,1
+"517","male",32,"black","no",5,"foreign-born","married",1,0,22,1,6.5510803350434,30,49,"25-1000","611M1","Southeast",1,3
+"518","female",55,"white","no",1,"native","divorced",1,0,23,0,11.0020998412042,40,49,"25-2020","6111","Southeast",2,1
+"519","female",41,"white","no",1,"native","divorced",2,0,19,0,10.8589989975636,50,49,"45-2011","923","Southeast",1,3
+"520","female",41,"black","no",1,"native","divorced",5,2,19,0,11.0821425488778,40,49,"43-3021","9211MP","Southeast",2,3
+"521","male",58,"white","no",1,"native","married",3,0,19,0,11.5129254649702,62,49,"33-3050","5617Z","Southeast",2,2
+"522","female",35,"white","no",1,"native","married",1,0,21,0,11.3850920934603,40,49,"11-1021","928110P2","Southeast",1,3
+"523","female",55,"black","no",1,"native","separated",2,0,21,0,10.6689553946757,40,49,"43-4051","923","Southeast",2,1
+"524","male",25,"black","no",1,"native","never married",3,0,19,0,10.5186731916264,32,49,"43-6014","928P","Southeast",1,3
+"525","male",34,"white","no",1,"native","divorced",2,1,19,0,10.5966347330961,40,49,"49-3011","928110P5","Southeast",1,3
+"526","female",27,"asian","no",1,"native","never married",1,0,23,1,10.5453414387085,75,39,"29-1210","611M1","Southeast",1,2
+"527","female",53,"white","no",1,"native","divorced",1,0,19,0,11.1418617835794,44,49,"43-5052","491","Southeast",2,1
+"528","female",30,"white","no",1,"native","never married",2,0,16,0,10.0647557001323,45,49,"43-6014","484","Southeast",1,3
+"529","female",61,"white","no",1,"native","married",2,0,18,0,10.2035921449865,40,47,"43-6014","611M1","Southeast",2,1
+"530","male",48,"white","no",1,"native","married",2,0,16,0,10.3089526606443,42,49,"33-3050","92MP","Southeast",2,1
+"531","female",46,"white","no",1,"native","married",2,0,20,0,9.65502619323763,40,49,"25-2020","6111","Southeast",2,1
+"532","female",52,"black","no",1,"native","married",2,0,20,0,10.5186731916264,40,49,"29-1141","6111","Southeast",2,1
+"533","male",55,"black","no",1,"native","married",2,0,21,0,10.0212705881925,40,49,"53-3052","6111","Southeast",2,1
+"534","female",38,"white","no",1,"native","married",4,2,20,0,10.7363966754712,40,49,"25-2020","6111","Southeast",1,3
+"535","male",37,"white","no",1,"native","married",4,2,19,0,10.7144177687525,40,49,"49-3040","928P","Southeast",1,3
+"536","female",36,"white","no",1,"native","married",4,2,22,0,10.807705703176,50,39,"25-2020","6111","Southeast",1,3
+"537","male",58,"white","no",1,"native","married",2,0,19,0,11.5617156291397,40,49,"53-2010","928P","Southeast",2,1
+"538","male",25,"white","no",1,"native","never married",1,0,20,0,8.55641390456952,25,47,"43-4171","611M1","Southeast",1,3
+"539","female",52,"white","no",1,"native","never married",2,0,22,0,10.8589989975636,40,39,"25-2020","6111","Southeast",2,1
+"540","female",25,"black","no",1,"native","never married",4,0,19,0,9.7981270368783,40,49,"43-9XXX","622M","Southeast",1,3
+"541","female",62,"black","no",1,"native","divorced",4,0,19,0,10.3089526606443,40,49,"29-2061","622M","Southeast",2,1
+"542","female",56,"white","no",1,"native","married",2,0,16,0,9.99879773234045,38,49,"11-9030","6111","Southeast",2,1
+"543","female",46,"black","no",1,"native","widowed",2,0,21,0,10.8197782844103,40,49,"21-1029","923","Southeast",2,1
+"544","male",56,"black","no",1,"native","married",3,1,21,0,10.0432494949113,40,49,"25-4010","712","Southeast",2,1
+"545","female",52,"black","no",1,"native","married",3,1,22,0,11.1562505210315,40,49,"11-3031","923","Southeast",2,1
+"546","female",27,"white","no",1,"native","married",3,1,21,0,10.2750511089686,40,49,"27-3031","2211P","Southeast",1,3
+"547","female",34,"white","no",1,"native","married",5,3,19,0,10.1266311038503,36,49,"35-2010","6111","Southeast",1,3
+"548","female",61,"black","no",1,"native","married",3,0,16,0,8.69951474821019,30,49,"39-9011","6111","Southeast",2,1
+"549","male",52,"white","no",1,"native","married",2,0,18,0,11.1418617835794,40,49,"33-3050","92MP","Southeast",2,1
+"550","female",44,"black","no",1,"native","never married",1,0,21,0,10.2035921449865,50,49,"11-91XX","9211MP","Southeast",2,1
+"551","male",46,"white","no",1,"native","married",3,1,19,0,11.0508900053737,40,49,"11-9030","928P","Southeast",2,1
+"552","female",55,"white","no",1,"native","married",2,0,22,0,10.8967393255464,40,49,"43-1011","928P","Southeast",2,1
+"553","male",57,"white","no",1,"native","married",2,0,22,0,11.6952470217642,40,49,"43-1011","928P","Southeast",2,1
+"554","female",41,"white","no",1,"native","separated",1,0,22,0,10.9508065468167,50,49,"25-2020","6111","Southeast",1,3
+"555","female",60,"black","no",1,"native","married",2,0,20,0,10.2219412836547,40,49,"43-6014","622M","Southeast",2,1
+"556","male",41,"white","no",1,"native","married",6,2,21,0,11.6952470217642,40,49,"43-9XXX","2211P","Southeast",1,3
+"557","male",55,"white","no",1,"native","married",2,0,22,0,10.7995755770928,42,49,"11-9030","6111","Southeast",2,1
+"558","male",21,"white","no",1,"native","never married",3,0,16,0,7.09007683577609,20,0,"39-2021","712","Southeast",3,3
+"559","female",27,"white","no",1,"native","married",3,1,22,0,10.6213273456864,40,49,"21-1022","6241","Southeast",1,3
+"560","male",47,"white","no",1,"native","never married",1,0,19,0,10.8395809117065,40,49,"53-7065","622M","Southeast",2,1
+"561","male",56,"white","no",1,"native","married",2,0,18,0,10.6454248972655,40,49,"47-2151","928P","Southeast",2,1
+"562","male",41,"white","no",1,"native","married",5,2,21,0,12.8764628389675,40,49,"43-1011","923","Southeast",1,3
+"563","female",28,"black","no",1,"native","never married",2,0,21,0,10.5453414387085,40,49,"21-1029","923","Southeast",1,3
+"564","female",50,"white","no",1,"native","married",2,0,21,0,10.5966347330961,50,39,"25-2020","6111","Southeast",2,1
+"565","male",49,"white","no",1,"native","married",2,0,20,0,11.0821425488778,44,49,"21-1093","6241","Southeast",2,1
+"566","male",36,"white","no",1,"native","married",4,2,21,0,10.7144177687525,40,49,"21-1092","92MP","Southeast",1,3
+"567","male",23,"white","no",1,"native","married",2,0,21,0,7.17011954344963,40,49,"25-2030","6111","Southeast",1,3
+"568","male",47,"white","no",1,"native","married",4,0,20,0,11.5327280922664,50,49,"11-9030","928P","Southeast",2,1
+"569","female",60,"white","no",1,"native","married",2,0,21,0,10.8589989975636,40,49,"43-6014","92M2","Southeast",2,1
+"570","male",32,"white","no",1,"native","married",3,1,20,0,10.5966347330961,72,49,"33-2011","92MP","Southeast",1,2
+"571","male",34,"white","no",1,"native","divorced",3,2,21,0,11.0508900053737,40,49,"43-1011","5412","Southeast",1,3
+"572","male",24,"white","no",1,"native","never married",1,0,21,0,10.5453414387085,60,49,"25-2020","6111","Southeast",1,2
+"573","female",53,"black","no",1,"native","married",2,0,20,0,10.2399597891573,40,49,"43-6014","923","Southeast",2,1
+"574","female",50,"white","no",1,"native","married",4,0,22,0,10.4042628404486,40,26,"25-2020","6111","Southeast",3,1
+"575","female",50,"white","no",1,"native","married",3,1,21,0,10.6919449129004,40,49,"25-2020","6111","Southeast",2,1
+"576","male",53,"white","no",1,"native","married",3,1,21,0,11.7752897294377,40,49,"17-2070","928P","Southeast",2,1
+"577","male",48,"white","no",1,"native","married",2,0,18,0,10.77895628989,46,49,"33-3050","92MP","Southeast",2,1
+"578","female",33,"white","no",1,"native","never married",3,0,22,0,9.39266192877014,40,49,"25-1000","611M1","Southeast",1,3
+"579","female",59,"white","no",1,"native","married",2,0,22,0,11.0821425488778,40,49,"25-2030","6111","Southeast",2,1
+"580","male",44,"black","no",1,"native","never married",2,0,19,0,10.7144177687525,40,49,"33-1011","9211MP","Southeast",1,1
+"581","male",60,"white","no",1,"native","married",2,0,22,0,8.51719319141624,60,49,"25-2020","6111","Southeast",2,1
+"582","female",38,"white","no",1,"native","married",3,1,16,0,9.21034037197618,20,49,"53-3051","6111","Southeast",3,3
+"583","male",31,"white","no",1,"native","divorced",1,0,21,0,10.8589989975636,56,49,"33-2011","92MP","Southeast",1,2
+"584","male",27,"white","no",1,"native","divorced",1,0,22,0,10.3089526606443,40,49,"33-3050","92MP","Southeast",1,3
+"585","female",20,"white","no",1,"native","never married",1,0,19,0,9.68034400122192,40,39,"29-2055","622M","Southeast",1,3
+"586","male",39,"white","no",1,"native","married",6,4,22,0,11.3850920934603,40,49,"25-2020","6111","Southeast",1,3
+"587","male",30,"black","no",1,"native","married",2,0,22,0,10.6642933815699,50,49,"29-2090","928P","Southeast",1,3
+"588","female",53,"white","no",1,"native","divorced",1,0,16,0,11.1418617835794,40,49,"39-4031","8122","Southeast",2,1
+"589","male",59,"white","no",1,"native","married",3,0,16,0,11.1272629841582,44,49,"33-9030","2211P","Southeast",2,1
+"590","male",36,"white","no",1,"native","married",4,2,21,0,11.7360690162844,40,49,"17-2011","928P","Southeast",1,3
+"591","female",33,"AIAN","no",1,"native","married",4,2,21,0,10.3089526606443,40,49,"25-2020","6111","Southeast",1,3
+"592","male",38,"white","no",1,"native","married",4,2,21,0,9.61580548008435,14,39,"53-3052","6111","Southeast",3,3
+"593","male",62,"black","no",1,"native","divorced",2,0,19,0,9.90348755253613,20,39,"11-91XX","9211MP","Southeast",3,1
+"594","female",40,"white","no",1,"native","married",2,0,16,0,10.0432494949113,35,49,"43-9061","9211MP","Southeast",1,3
+"595","male",55,"black","no",1,"native","married",2,0,21,0,11.289781913656,44,49,"11-3031","92119","Southeast",2,1
+"596","male",41,"black","no",1,"native","divorced",5,4,14,0,9.39266192877014,40,49,"47-2061","23","Southeast",1,3
+"597","male",40,"white","no",1,"native","divorced",2,0,20,0,10.5966347330961,40,49,"43-4031","92MP","Southeast",1,3
+"598","female",63,"white","no",1,"native","married",3,0,21,0,10.5966347330961,60,49,"25-2030","6111","Southeast",2,1
+"599","female",35,"white","no",1,"native","married",7,5,21,0,6.62007320653036,8,49,"25-2020","6111","Southeast",3,3
+"600","male",49,"white","no",1,"native","married",7,5,21,0,10.77895628989,45,49,"25-2020","6111","Southeast",2,1
