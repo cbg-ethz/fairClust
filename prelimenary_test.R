@@ -1,6 +1,7 @@
 # loading the package
 library(fairadapt)
 library(ggplot2)
+library(faircause)
 
 vars <- c("sex", "age", "native_country", "marital_status", "education_num",
           "workclass", "hours_per_week", "occupation", "income")
@@ -72,7 +73,7 @@ gov_grph <- graphModel(gov_adj, gov_cfd)
 
 gov_dat$salary <- log(gov_dat$salary)
 
-n_samp <- 600
+n_samp <- 30000
 n_pred <- 5
 gov_trn <- head(gov_dat, n = n_samp)
 gov_prd <- tail(gov_dat, n = n_pred)
@@ -89,9 +90,9 @@ autoplot(gov_ada, when = "after") +
 autoplot(gov_ada, when = "before") +
   theme_minimal() +
   # theme_bw() +
-  ggtitle("Adapted salary density by gender")
+  ggtitle("Unadapted salary density by gender")
 
-data_unfair <- head(gov_dat, 600)
+data_unfair <- head(gov_dat, 30000)
 data_fair <- gov_ada$adapt.train
 data_fair$sex <- data_unfair$sex
 
@@ -119,19 +120,19 @@ set.seed(2022)
 tvd <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
                          x0 = "female", x1 = "male")
 
-set.seed(2022)
-tvd <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
-                         x0 = "female", x1 = "male")
+# set.seed(2022)
+# tvd <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
+#                          x0 = "female", x1 = "male")
 
 # visualize the x-specific measures of direct, indirect, and spurious effect
 autoplot(tvd, decompose = "xspec", dataset = "Census 2018")
 
-set.seed(2022)
-tvd_fair <- fairness_cookbook(data = data_fair, X = X, W = W, Z = Z, Y = Y, 
-                         x0 = "female", x1 = "male")
+# set.seed(2022)
+# tvd_fair <- fairness_cookbook(data = data_fair, X = X, W = W, Z = Z, Y = Y, 
+#                          x0 = "female", x1 = "male")
 
-# visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018")
+# # visualize the x-specific measures of direct, indirect, and spurious effect
+# autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018")
 
 
 data_unfair
