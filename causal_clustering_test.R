@@ -61,7 +61,7 @@ TV <- mean(combined_data$cluster[combined_data$sex == 1]) -
 TV
 
 
-X <- "sex" # protected attribute
+X <- "sex" # protected attribut
 Z <- c("race", "native.country") # confounders
 W <- c("marital.status", "workclass", "education", 
        "hours.per.week", "occupation", "relationship") # mediators

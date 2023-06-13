@@ -3,46 +3,45 @@ library(fairadapt)
 library(ggplot2)
 library(faircause)
 
-vars <- c("sex", "age", "native_country", "marital_status", "education_num",
-          "workclass", "hours_per_week", "occupation", "income")
-
-# initialising the adjacency matrix
-adj.mat <- c(
-  0, 0, 0, 1, 1, 1, 1, 1, 1, # sex
-  0, 0, 0, 1, 1, 1, 1, 1, 1, # age
-  0, 0, 0, 1, 1, 1, 1, 1, 1, # native_country
-  0, 0, 0, 0, 1, 1, 1, 1, 1, # marital_status
-  0, 0, 0, 0, 0, 1, 1, 1, 1, # education_num
-  0, 0, 0, 0, 0, 0, 0, 0, 1, # workclass
-  0, 0, 0, 0, 0, 0, 0, 0, 1, # hours_per_week
-  0, 0, 0, 0, 0, 0, 0, 0, 1, # occupation
-  0, 0, 0, 0, 0, 0, 0, 0, 0  # income
-)
-
-adj.mat <- matrix(adj.mat, nrow = length(vars), ncol = length(vars),
-                  dimnames = list(vars, vars), byrow = TRUE)
-
-# reading in the UCI Adult data
-adult <- readRDS(
-  system.file("extdata", "uci_adult.rds", package = "fairadapt")
-)
-
-n <- nrow(adult) / 2
-
-mod <- fairadapt(income ~ ., train.data = head(adult, n = n),
-                 test.data = tail(adult, n = n), prot.attr = "sex",
-                 adj.mat = adj.mat, res.vars = "hours_per_week")
-
-adapt.train <- mod[["adapt.train"]]
-adapt.test  <- mod[["adapt.test"]]
-
-# ------------------------
+# vars <- c("sex", "age", "native_country", "marital_status", "education_num",
+#           "workclass", "hours_per_week", "occupation", "income")
+# 
+# # initialising the adjacency matrix
+# adj.mat <- c(
+#   0, 0, 0, 1, 1, 1, 1, 1, 1, # sex
+#   0, 0, 0, 1, 1, 1, 1, 1, 1, # age
+#   0, 0, 0, 1, 1, 1, 1, 1, 1, # native_country
+#   0, 0, 0, 0, 1, 1, 1, 1, 1, # marital_status
+#   0, 0, 0, 0, 0, 1, 1, 1, 1, # education_num
+#   0, 0, 0, 0, 0, 0, 0, 0, 1, # workclass
+#   0, 0, 0, 0, 0, 0, 0, 0, 1, # hours_per_week
+#   0, 0, 0, 0, 0, 0, 0, 0, 1, # occupation
+#   0, 0, 0, 0, 0, 0, 0, 0, 0  # income
+# )
+# 
+# adj.mat <- matrix(adj.mat, nrow = length(vars), ncol = length(vars),
+#                   dimnames = list(vars, vars), byrow = TRUE)
+# 
+# # reading in the UCI Adult data
+# adult <- readRDS(
+#   system.file("extdata", "uci_adult.rds", package = "fairadapt")
+# )
+# 
+# n <- nrow(adult) / 2
+# 
+# mod <- fairadapt(income ~ ., train.data = head(adult, n = n),
+#                  test.data = tail(adult, n = n), prot.attr = "sex",
+#                  adj.mat = adj.mat, res.vars = "hours_per_week")
+# 
+# adapt.train <- mod[["adapt.train"]]
+# adapt.test  <- mod[["adapt.test"]]
+# 
+# # ------------------------
 
 gov_dat <- data("gov_census", package = "fairadapt")
 gov_dat <- get(gov_dat)
 
 head(gov_dat)
-
 
 dem <- c("age", "race", "hispanic_origin", "citizenship",
                  "nativity", "economic_region")
@@ -70,11 +69,37 @@ gov_cfd[prt, dem] <- 1
 gov_cfd[dem, prt] <- 1
 gov_grph <- graphModel(gov_adj, gov_cfd)
 
+# define again based on the SFM
+
+X <- "sex" # protected attribute
+
+Z <- c("age", "race", "hispanic_origin", "citizenship", "nativity", 
+       "economic_region") # confounders
+W <- c("marital", "family_size", "children", "education_level", "english_level", 
+       "hours_worked", "weeks_worked", "occupation", "industry") # mediators
+Y <- "salary" # outcome
+
+cols <- c(Z, W, X, Y)
+
+gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
+                  dimnames = rep(list(cols), 2))
+
+gov_cfd <- gov_adj
+
+
+gov_adj[Z, c(W, Y)] <- 1
+gov_adj[W, c(Y)] <- 1
+gov_adj[X, c(W, Y)] <- 1
+gov_cfd[X, Z] <- 1
+gov_cfd[Z, X] <- 1
+gov_grph <- graphModel(gov_adj, gov_cfd)
+
+# end try again
 
 gov_dat$salary <- log(gov_dat$salary)
 
-n_samp <- 30000
-n_pred <- 5
+n_samp <- 5000
+n_pred <- 5000
 gov_trn <- head(gov_dat, n = n_samp)
 gov_prd <- tail(gov_dat, n = n_pred)
 
@@ -92,7 +117,7 @@ autoplot(gov_ada, when = "before") +
   # theme_bw() +
   ggtitle("Unadapted salary density by gender")
 
-data_unfair <- head(gov_dat, 30000)
+data_unfair <- head(gov_dat, n_samp)
 data_fair <- gov_ada$adapt.train
 data_fair$sex <- data_unfair$sex
 
@@ -120,22 +145,19 @@ set.seed(2022)
 tvd <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
                          x0 = "female", x1 = "male")
 
-# set.seed(2022)
-# tvd <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
-#                          x0 = "female", x1 = "male")
-
 # visualize the x-specific measures of direct, indirect, and spurious effect
 autoplot(tvd, decompose = "xspec", dataset = "Census 2018")
 
-# set.seed(2022)
-# tvd_fair <- fairness_cookbook(data = data_fair, X = X, W = W, Z = Z, Y = Y, 
-#                          x0 = "female", x1 = "male")
+set.seed(2022)
+tvd_fair <- fairness_cookbook(data = data_fair, X = X, W = W, Z = Z, Y = Y,
+                         x0 = "female", x1 = "male")
 
 # # visualize the x-specific measures of direct, indirect, and spurious effect
-# autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018")
+autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018")
 
 
-data_unfair
+
+# data_unfair
 
 
 # df <- read.csv("yourdata.csv") # Uncomment this if you are loading a CSV file
@@ -145,22 +167,16 @@ num_clusters <- 5
 
 # Perform k-prototypes clustering
 result <- kproto(x = data_unfair, k = num_clusters)
-
-# Print cluster assignment for each data point
-print(result$cluster)
-
 # You can also add these clusters to your original dataframe
 data_unfair$cluster_v1 <- result$cluster
 
 # Perform k-prototypes clustering
 result <- kproto(x = data_unfair[-1], k = num_clusters)
-
 # You can also add these clusters to your original dataframe
 data_unfair$cluster_v2 <- result$cluster
 
 # Perform k-prototypes clustering
 result <- kproto(x = data_fair[-2], k = num_clusters)
-
 # You can also add these clusters to your original dataframe
 data_fair$cluster_v3 <- result$cluster
 
@@ -216,14 +232,23 @@ write.csv(data_unfair,"/Users/frbayer/Documents/phd_main/projects/fairClust/data
 fairlet_data <- read.csv("/Users/frbayer/Documents/phd_main/projects/fairClust/data_test/fairlet_data.csv")
 
 X <- "gender" # protected attribute
-Z <- c("age", "fnlwgt") # confounders
-W <- c("capital_gain", "hours_per_week", "education_num") # mediators
+Z <- c("age", "fnlwgt", "education_num", "capital_gain") # confounders
+W <- c("hours_per_week") # mediators
 Y <- "clusters" # outcome
 
 tvd_fair <- fairness_cookbook(data = fairlet_data, X = X, W = W, Z = Z, Y = Y, 
                               x0 = 0, x1 = 1)
 
 # visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018 (Neglecting Sex)")
+autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018 (Balanced Fair Clustering)")
+
+
+
+
+
+
+
+
+
 
 
