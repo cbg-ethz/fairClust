@@ -1,5 +1,6 @@
 # loading the package
 library(fairadapt)
+library(faircause)
 library(ggplot2)
 
 vars <- c("sex", "age", "native_country", "marital_status", "education_num",
@@ -72,7 +73,7 @@ gov_grph <- graphModel(gov_adj, gov_cfd)
 
 gov_dat$salary <- log(gov_dat$salary)
 
-n_samp <- 600
+n_samp <- 3000
 n_pred <- 5
 gov_trn <- head(gov_dat, n = n_samp)
 gov_prd <- tail(gov_dat, n = n_pred)
@@ -119,10 +120,6 @@ set.seed(2022)
 tvd <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
                          x0 = "female", x1 = "male")
 
-set.seed(2022)
-tvd <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
-                         x0 = "female", x1 = "male")
-
 # visualize the x-specific measures of direct, indirect, and spurious effect
 autoplot(tvd, decompose = "xspec", dataset = "Census 2018")
 
@@ -134,10 +131,9 @@ tvd_fair <- fairness_cookbook(data = data_fair, X = X, W = W, Z = Z, Y = Y,
 autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018")
 
 
-data_unfair
-
-
 # df <- read.csv("yourdata.csv") # Uncomment this if you are loading a CSV file
+
+library(clustMixType)
 
 # Set number of clusters
 num_clusters <- 5
@@ -152,7 +148,7 @@ print(result$cluster)
 data_unfair$cluster_v1 <- result$cluster
 
 # Perform k-prototypes clustering
-result <- kproto(x = data_unfair[-1], k = num_clusters)
+result <- kproto(x = data_unfair[,-1], k = num_clusters)
 
 # You can also add these clusters to your original dataframe
 data_unfair$cluster_v2 <- result$cluster
@@ -187,11 +183,11 @@ W <- c("salary", "marital", "family_size", "children", "education_level", "engli
        "hours_worked", "weeks_worked", "occupation", "industry") # mediators
 Y <- "cluster_v1" # outcome
 
-tvd_fair <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
+tvd_fair2 <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
                               x0 = "female", x1 = "male")
 
 # visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018 (naive vanilla clustering)")
+autoplot(tvd_fair2, decompose = "xspec", dataset = "Census 2018 (naive vanilla clustering)")
 
 
 X <- "sex" # protected attribute
@@ -201,11 +197,72 @@ W <- c("salary", "marital", "family_size", "children", "education_level", "engli
        "hours_worked", "weeks_worked", "occupation", "industry") # mediators
 Y <- "cluster_v2" # outcome
 
-tvd_fair <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
+tvd_fair3 <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = Y, 
                               x0 = "female", x1 = "male")
 
 # visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018 (Neglecting Sex)")
+autoplot(tvd_fair3, decompose = "xspec", dataset = "Census 2018 (Neglecting Sex)")
+
+
+plot_vals <- tvd_fair3$measures
+plot_vals <- rbind(plot_vals[plot_vals$measure=="tv",],plot_vals[plot_vals$measure=="ctfde",], 
+      plot_vals[plot_vals$measure=="ctfie",], plot_vals[plot_vals$measure=="ctfse",])
+plot_vals$Method <- "FtU"
+
+plot_vals_temp <- plot_vals
+
+plot_vals <- tvd_fair2$measures
+plot_vals <- rbind(plot_vals[plot_vals$measure=="tv",],plot_vals[plot_vals$measure=="ctfde",], 
+                   plot_vals[plot_vals$measure=="ctfie",], plot_vals[plot_vals$measure=="ctfse",])
+plot_vals$Method <- "Vanilla"
+
+plot_vals_temp2 <- plot_vals
+
+plot_vals <- tvd_fair$measures
+plot_vals <- rbind(plot_vals[plot_vals$measure=="tv",],plot_vals[plot_vals$measure=="ctfde",], 
+                   plot_vals[plot_vals$measure=="ctfie",], plot_vals[plot_vals$measure=="ctfse",])
+plot_vals$Method <- "Causally Fair"
+
+plot_vals <- rbind(plot_vals, plot_vals_temp, plot_vals_temp2)
+
+library(hrbrthemes)
+library(viridis)
+
+my_colors <- c("#D73027","#91BFDB", "#4575B4")
+my_colors <- c("#D73027","#ABD9E9", "#4575B4")
+
+data_new <- plot_vals                             # Duplicate data
+data_new$measure <- factor(data_new$measure,     # Reorder factor levels
+                         c("tv", "ctfde", "ctfie", "ctfse"))
+
+
+p1 <- data_new %>%
+  ggplot( aes(x=measure, y=value, fill=Method, colour=Method)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.3) +
+  geom_hline(aes(yintercept = 0), color = "black") +
+  # scale_fill_viridis(discrete = TRUE, alpha=0.6, colors) +
+  scale_colour_manual(values=my_colors) +
+  scale_fill_manual(values=my_colors) +
+  geom_point(pch = 21, position = position_jitterdodge(0.15),cex=0.4, alpha = 0.3)+ ## THIS IS FOR JITTER
+  # geom_jitter(size=0.4, alpha=0.3) +
+  theme_minimal() +
+  theme(
+    # legend.position="none",
+    # plot.title = element_text(size=11)
+  ) +
+  # ggtitle("A boxplot with jitter") +
+  xlab("Fairness Measure")+
+  ylab("Value"); p1
+
+library("extrafont")
+loadfonts()
+pdf("~/Desktop/gov_census_fair_clusters.pdf", height = 4.3, width = 7,
+    family = "Arial", paper = "special", onefile = FALSE)
+# family = "Times New Roman", paper = "special", onefile = FALSE)
+op <- par(mar = c(5, 4, 0.05, 0.05) + 0.1)
+p1
+par(op)
+dev.off()
 
 
 write.csv(data_unfair,"/Users/frbayer/Documents/phd_main/projects/fairClust/data_test/data_unfair.csv")
