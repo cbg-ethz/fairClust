@@ -256,7 +256,7 @@ p1 <- data_new %>%
 
 library("extrafont")
 loadfonts()
-pdf("~/Desktop/gov_census_fair_clusters.pdf", height = 4.3, width = 7,
+pdf("~/Desktop/gov_census_fair_clusters.pdf", height = 3.7, width = 6,
     family = "Arial", paper = "special", onefile = FALSE)
 # family = "Times New Roman", paper = "special", onefile = FALSE)
 op <- par(mar = c(5, 4, 0.05, 0.05) + 0.1)
