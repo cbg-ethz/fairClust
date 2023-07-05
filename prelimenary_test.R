@@ -90,7 +90,7 @@ autoplot(gov_ada, when = "after") +
 autoplot(gov_ada, when = "before") +
   theme_minimal() +
   # theme_bw() +
-  ggtitle("Adapted salary density by gender")
+  ggtitle("Salary density by gender")
 
 data_unfair <- head(gov_dat, 600)
 data_fair <- gov_ada$adapt.train
