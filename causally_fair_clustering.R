@@ -6,13 +6,13 @@ library(FairMclus)
 library(dplyr)
 library(ggplot2)
 library(tictoc)
-
+# library(BalKmeans)
 
 # dplyr, irr, rlist, tidyr, parallel, magrittr, cluster, base, data.table, foreach, doParallel
 
 rm(list=ls())
 
-set.seed(100)
+set.seed(10)
 
 # load data
 gov_dat <- get(data("gov_census", package = "fairadapt"))
@@ -219,42 +219,7 @@ p1 <- data_new %>%
   xlab("Fairness Measure")+
   ylab("Value"); p1
 
-saveRDS(data_new, "results/census.rds")
-
-
-library(ggpubr)
-
-data_census <- readRDS("results/census.rds")
-
-# Create the plot
-p_census <- data_census %>%
-  ggplot( aes(x=measure, y=value, fill=Method, colour=Method)) +
-  geom_boxplot(outlier.shape = NA, alpha = 0.3) +
-  geom_hline(aes(yintercept = 0), color = "black") +
-  scale_colour_manual(values=my_colors) +
-  scale_fill_manual(values=my_colors) +
-  geom_point(pch = 21, position = position_jitterdodge(0.15),cex=0.4, alpha = 0.3)+ 
-  theme_minimal() +
-  xlab("Fairness Measure")+
-  ylab("Value")+ 
-  theme(legend.position = "none");p2
-
-data_new_compas <- readRDS("results/compas.rds")
-
-# Create the plot
-p_compas <- data_new_compas %>%
-  ggplot( aes(x=measure, y=value, fill=Method, colour=Method)) +
-  geom_boxplot(outlier.shape = NA, alpha = 0.3) +
-  geom_hline(aes(yintercept = 0), color = "black") +
-  scale_colour_manual(values=my_colors) +
-  scale_fill_manual(values=my_colors) +
-  geom_point(pch = 21, position = position_jitterdodge(0.15),cex=0.4, alpha = 0.3)+ 
-  theme_minimal() +
-  xlab("Fairness Measure")+
-  ylab("Value")+ 
-  theme(legend.position = "none");p_compas
-
-ggarrange(p_census,p_compas, common.legend = TRUE, legend="bottom")
+# saveRDS(data_new, "results/census.rds")
 
 # library("extrafont")
 # loadfonts()

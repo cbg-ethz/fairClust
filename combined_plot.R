@@ -6,6 +6,9 @@ library(extrafont)
 data_census <- readRDS("results/census.rds")
 data_compas <- readRDS("results/compas.rds")
 
+levels(data_census$measure) <- c("TV", "NDE", "NIE", "Exp-SE")
+levels(data_compas$measure) <- c("TV", "NDE", "NIE", "Exp-SE")
+
 my_colors <- c("#D73027", "#117777","#708090","#ABD9E9", "#4575B4")
 
 # make subplots and combine them
@@ -21,7 +24,7 @@ p_census <- data_census %>%
   theme_minimal() +
   xlab("Fairness Measure")+
   ylab("Value")+ 
-  theme(legend.position = "none");p2
+  theme(legend.position = "none");p_census
 
 # Create the plot
 p_compas <- data_compas %>%

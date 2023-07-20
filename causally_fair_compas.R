@@ -9,7 +9,7 @@ library(tictoc)
 
 rm(list=ls())
 
-set.seed(10)
+set.seed(1)
 
 # load data
 compas_dat <- get(data("compas", package = "fairadapt"))
