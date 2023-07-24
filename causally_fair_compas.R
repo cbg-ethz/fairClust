@@ -17,7 +17,7 @@ head(compas_dat)
 
 
 # select training data
-n_samp <- 1000
+n_samp <- 1500
 compas_trn <- head(compas_dat, n = n_samp)
 data_unfair <- compas_trn
 
