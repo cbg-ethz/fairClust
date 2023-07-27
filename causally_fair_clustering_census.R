@@ -132,13 +132,16 @@ df_temp <- cbind(1:nrow(df_test), df_test)
 colnames(df_temp) <- paste0("V", 1:ncol(df_temp)-1)
 transformed_data <- as.matrix(df_temp)
 
-tic()
-result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=4, kclus=num_clusters, numpos=c(2,8,9,10,11,12,13,14))
-# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(2:14))
-# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(12))
-# result <- FairMclus::FairMclus(f=transformed_data, typedata="c", protected="V1", ncores=0, kclus=num_clusters, numpos=c(0))
-toc()
-data_unfair$cluster_balanced <- result$cluster
+temp_results <- balance_cluster(transformed_data[,-c(1:2)], transformed_data[,2], num_clusters)
+data_unfair$cluster_balanced <- temp_results$cluster
+
+# tic()
+# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=4, kclus=num_clusters, numpos=c(2,8,9,10,11,12,13,14))
+# # result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(2:14))
+# # result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(12))
+# # result <- FairMclus::FairMclus(f=transformed_data, typedata="c", protected="V1", ncores=0, kclus=num_clusters, numpos=c(0))
+# toc()
+# data_unfair$cluster_balanced <- result$cluster
 
 # calculate fairness measures
 
@@ -187,11 +190,11 @@ filter_and_assign <- function(data, method) {
 }
 
 # Apply the function to each dataframe
-plot_vals_fair5 <- filter_and_assign(tvd_fair_se$measures, "Causally Fair (SE)")
+plot_vals_fair5 <- filter_and_assign(tvd_fair_se$measures, "Causally Fair (IE+SE)")
 plot_vals_fair4 <- filter_and_assign(tvd_fair4$measures, "Balanced")
 plot_vals_fair3 <- filter_and_assign(tvd_fair3$measures, "FtU")
 plot_vals_fair2 <- filter_and_assign(tvd_fair2$measures, "Vanilla")
-plot_vals_fair <- filter_and_assign(tvd_fair$measures, "Causally Fair")
+plot_vals_fair <- filter_and_assign(tvd_fair$measures, "Causally Fair (IE)")
 
 # Combine all dataframes
 plot_vals <- rbind(plot_vals_fair5, plot_vals_fair4, plot_vals_fair3, plot_vals_fair2, plot_vals_fair)
@@ -205,7 +208,7 @@ my_colors <- c("#D73027", "#117777","#708090","#ABD9E9", "#4575B4")
 # Preprocess the data for plotting
 data_new <- plot_vals
 data_new$measure <- factor(data_new$measure, measures)
-data_new$Method <- factor(data_new$Method, c("Causally Fair", "Causally Fair (SE)", "Balanced", "FtU", "Vanilla"))
+data_new$Method <- factor(data_new$Method, c("Causally Fair (IE+SE)", "Causally Fair (IE)", "Balanced", "FtU", "Vanilla"))
 
 # Create the plot
 p1 <- data_new %>%
