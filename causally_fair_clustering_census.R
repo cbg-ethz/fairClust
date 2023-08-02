@@ -12,7 +12,7 @@ library(tictoc)
 
 rm(list=ls())
 
-set.seed(10)
+set.seed(1)
 
 # load data
 gov_dat <- get(data("gov_census", package = "fairadapt"))
