@@ -27,7 +27,7 @@ gov_trn <- head(gov_dat, n = n_samp)
 data_unfair <- gov_trn
 
 # Set number of clusters
-num_clusters <- 3
+num_clusters <- 2
 
 # # define standard fairness model graph
 # X <- "sex" # protected attribute
@@ -52,9 +52,11 @@ num_clusters <- 3
 X <- "sex" # protected attribute
 Z <- c("age", "race", "hispanic_origin", "citizenship", "nativity", 
        "economic_region") # confounders
-W <- c("marital", "family_size", "children", "education_level", "english_level", 
+W <- c("salary", "marital", "family_size", "children", "education_level", "english_level", 
        "hours_worked", "weeks_worked", "occupation", "industry") # mediators
-Y <- "salary" # outcome
+Y <- "cluster" # outcome
+
+gov_trn$cluster <- 0
 
 cols <- c(Z, W, X, Y)
 
@@ -63,13 +65,15 @@ gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
 
 gov_cfd <- gov_adj
 
-gov_adj[Z, c(Y)] <- 1
+# gov_adj[Z, c(Y)] <- 1
 gov_adj[W, Y] <- 1
-gov_adj[X, c(W, Y)] <- 1
+gov_adj[X, W] <- 1
+# gov_adj[X, c(W, Y)] <- 1
 # gov_adj[X, Z] <- 1
-gov_cfd[X, Z] <- 1
-gov_cfd[Z, X] <- 1
-gov_grph <- graphModel(gov_adj, gov_cfd)
+
+# gov_cfd[X, Z] <- 1
+# gov_cfd[Z, X] <- 1
+# gov_grph <- graphModel(gov_adj, gov_cfd)
 
 
 # adapt data
@@ -82,7 +86,10 @@ gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
 
 gov_adj[Z, Y] <- 1
 gov_adj[W, Y] <- 1
-gov_adj[X, c(Z, W, Y)] <- 1
+gov_adj[Z, W] <- 1
+gov_adj[X, c(Z, W)] <- 1
+# gov_adj[X, c(Z, W, Y)] <- 1
+
 # gov_cfd[X, Z] <- 1
 # gov_cfd[Z, X] <- 1
 # gov_grph <- graphModel(gov_adj, gov_cfd)
@@ -132,16 +139,16 @@ df_temp <- cbind(1:nrow(df_test), df_test)
 colnames(df_temp) <- paste0("V", 1:ncol(df_temp)-1)
 transformed_data <- as.matrix(df_temp)
 
-temp_results <- balance_cluster(transformed_data[,-c(1:2)], transformed_data[,2], num_clusters)
-data_unfair$cluster_balanced <- temp_results$cluster
+# temp_results <- balance_cluster(transformed_data[,-c(1:2)], transformed_data[,2], num_clusters)
+# data_unfair$cluster_balanced <- temp_results$cluster
 
-# tic()
-# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=4, kclus=num_clusters, numpos=c(2,8,9,10,11,12,13,14))
-# # result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(2:14))
-# # result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(12))
-# # result <- FairMclus::FairMclus(f=transformed_data, typedata="c", protected="V1", ncores=0, kclus=num_clusters, numpos=c(0))
-# toc()
-# data_unfair$cluster_balanced <- result$cluster
+tic()
+result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=4, kclus=num_clusters, numpos=c(2,8,9,10,11,12,13,14))
+# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(2:14))
+# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(12))
+# result <- FairMclus::FairMclus(f=transformed_data, typedata="c", protected="V1", ncores=0, kclus=num_clusters, numpos=c(0))
+toc()
+data_unfair$cluster_balanced <- result$cluster
 
 # calculate fairness measures
 
