@@ -22,7 +22,7 @@ head(gov_dat)
 gov_dat$salary <- log(gov_dat$salary)
 
 # select training data
-n_samp <- 1000
+n_samp <- 500
 gov_trn <- head(gov_dat, n = n_samp)
 data_unfair <- gov_trn
 
@@ -63,7 +63,7 @@ cols <- c(Z, W, X, Y)
 gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
                   dimnames = rep(list(cols), 2))
 
-gov_cfd <- gov_adj
+# gov_cfd <- gov_adj
 
 # gov_adj[Z, c(Y)] <- 1
 gov_adj[W, Y] <- 1
@@ -77,7 +77,7 @@ gov_adj[X, W] <- 1
 
 
 # adapt data
-gov_ada <- fairadapt(salary ~ ., train.data = gov_trn,
+gov_ada <- fairadapt(cluster ~ ., train.data = gov_trn,
                      adj.mat = gov_adj, prot.attr = X)
 
 # adapt data for spurious effect
@@ -86,7 +86,7 @@ gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
 
 gov_adj[Z, Y] <- 1
 gov_adj[W, Y] <- 1
-gov_adj[Z, W] <- 1
+# gov_adj[Z, W] <- 1
 gov_adj[X, c(Z, W)] <- 1
 # gov_adj[X, c(Z, W, Y)] <- 1
 
@@ -96,7 +96,7 @@ gov_adj[X, c(Z, W)] <- 1
 
 
 # adapt data
-gov_ada_se <- fairadapt(salary ~ ., train.data = gov_trn,
+gov_ada_se <- fairadapt(cluster ~ ., train.data = gov_trn,
                      adj.mat = gov_adj, prot.attr = X)
 
 data_fair <- gov_ada$adapt.train
@@ -110,19 +110,23 @@ data_fair_se$sex <- data_unfair$sex
 
 # Perform vanialla clustering
 result <- kproto(x = data_unfair, k = num_clusters)
-data_unfair$cluster_vanilla <- result$cluster
+# data_unfair$cluster_vanilla <- result$cluster
+data_unfair$cluster_vanilla <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # Perform fairness through awareness clustering
 result <- kproto(x = data_unfair[,-1], k = num_clusters)
-data_unfair$cluster_unaware <- result$cluster
+# data_unfair$cluster_unaware <- result$cluster
+data_unfair$cluster_unaware <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
-# Perform causally fair clustering
+# Perform causally fair clustering minimizing NDE and NIE
 result <- kproto(x = data_fair[-2], k = num_clusters)
-data_unfair$cluster_fair <- result$cluster
+# data_unfair$cluster_fair <- result$cluster
+data_unfair$cluster_fair <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
-# Perform causally fair clustering including spurious effect
+# Perform causally fair clustering minimizing NDE, NIE and SE
 result <- kproto(x = data_fair_se[-2], k = num_clusters)
-data_unfair$cluster_fair_se <- result$cluster
+# data_unfair$cluster_fair_se <- result$cluster
+data_unfair$cluster_fair_se <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # balanced clustering
 
@@ -151,10 +155,6 @@ toc()
 data_unfair$cluster_balanced <- result$cluster
 
 # calculate fairness measures
-
-# include salary in W
-W <- c("salary", "marital", "family_size", "children", "education_level", "english_level", 
-       "hours_worked", "weeks_worked", "occupation", "industry") # mediators
 
 # causally fair clustering
 tvd_fair <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = "cluster_fair", 
@@ -197,25 +197,25 @@ filter_and_assign <- function(data, method) {
 }
 
 # Apply the function to each dataframe
-plot_vals_fair5 <- filter_and_assign(tvd_fair_se$measures, "Causally Fair (IE+SE)")
+plot_vals_fair5 <- filter_and_assign(tvd_fair_se$measures, "Causally Fair")
 plot_vals_fair4 <- filter_and_assign(tvd_fair4$measures, "Balanced")
 plot_vals_fair3 <- filter_and_assign(tvd_fair3$measures, "FtU")
 plot_vals_fair2 <- filter_and_assign(tvd_fair2$measures, "Vanilla")
-plot_vals_fair <- filter_and_assign(tvd_fair$measures, "Causally Fair (IE)")
+plot_vals_fair <- filter_and_assign(tvd_fair$measures, "Causally Fair (NDE+NIE)")
 
 # Combine all dataframes
 plot_vals <- rbind(plot_vals_fair5, plot_vals_fair4, plot_vals_fair3, plot_vals_fair2, plot_vals_fair)
 
 # Define color scheme
-my_colors <- c("#D73027","#ABD9E9", "#4575B4")
-my_colors <- c("#D73027", "#FDAE61","#ABD9E9","#708090", "#4575B4")
+# my_colors <- c("#D73027","#ABD9E9", "#4575B4")
+# my_colors <- c("#D73027", "#FDAE61","#ABD9E9","#708090", "#4575B4")
 my_colors <- c("#D73027", "#117777","#708090","#ABD9E9", "#4575B4")
 
 
 # Preprocess the data for plotting
 data_new <- plot_vals
 data_new$measure <- factor(data_new$measure, measures)
-data_new$Method <- factor(data_new$Method, c("Causally Fair (IE+SE)", "Causally Fair (IE)", "Balanced", "FtU", "Vanilla"))
+data_new$Method <- factor(data_new$Method, c("Causally Fair", "Causally Fair (NDE+NIE)", "Balanced", "FtU", "Vanilla"))
 
 # Create the plot
 p1 <- data_new %>%
