@@ -8,8 +8,6 @@ library(ggplot2)
 library(tictoc)
 # library(BalKmeans)
 
-# dplyr, irr, rlist, tidyr, parallel, magrittr, cluster, base, data.table, foreach, doParallel
-
 rm(list=ls())
 
 set.seed(1)
@@ -22,7 +20,7 @@ head(gov_dat)
 gov_dat$salary <- log(gov_dat$salary)
 
 # select training data
-n_samp <- 500
+n_samp <- 1000
 gov_trn <- head(gov_dat, n = n_samp)
 data_unfair <- gov_trn
 
@@ -105,6 +103,8 @@ data_fair$sex <- data_unfair$sex
 data_fair_se <- gov_ada_se$adapt.train
 data_fair_se$sex <- data_unfair$sex
 
+data_fair$cluster <- NULL
+data_fair_se$cluster <- NULL
 
 ## Clustering ## 
 
@@ -114,19 +114,19 @@ result <- kproto(x = data_unfair, k = num_clusters)
 data_unfair$cluster_vanilla <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # Perform fairness through awareness clustering
-result <- kproto(x = data_unfair[,-1], k = num_clusters)
+result <- kproto(x = data_unfair[,-c(1,18)], k = num_clusters)
 # data_unfair$cluster_unaware <- result$cluster
 data_unfair$cluster_unaware <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # Perform causally fair clustering minimizing NDE and NIE
-result <- kproto(x = data_fair[-2], k = num_clusters)
+result <- kproto(x = data_fair[-1], k = num_clusters)
 # data_unfair$cluster_fair <- result$cluster
-data_unfair$cluster_fair <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
+data_fair$cluster_fair <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # Perform causally fair clustering minimizing NDE, NIE and SE
-result <- kproto(x = data_fair_se[-2], k = num_clusters)
+result <- kproto(x = data_fair_se[-1], k = num_clusters)
 # data_unfair$cluster_fair_se <- result$cluster
-data_unfair$cluster_fair_se <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
+data_fair_se$cluster_fair_se <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # balanced clustering
 
@@ -157,13 +157,13 @@ data_unfair$cluster_balanced <- result$cluster
 # calculate fairness measures
 
 # causally fair clustering
-tvd_fair <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = "cluster_fair", 
+tvd_fair <- fairness_cookbook(data = data_fair, X = X, W = W, Z = Z, Y = "cluster_fair", 
                               x0 = "female", x1 = "male", nboot1=5)
 # visualize the x-specific measures of direct, indirect, and spurious effect
 autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018 (Fair Clusters)")
 
 # causally fair clustering with spurious effect
-tvd_fair_se <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = "cluster_fair_se", 
+tvd_fair_se <- fairness_cookbook(data = data_fair_se, X = X, W = W, Z = Z, Y = "cluster_fair_se", 
                                  x0 = "female", x1 = "male", nboot1=5)
 # visualize the x-specific measures of direct, indirect, and spurious effect
 autoplot(tvd_fair_se, decompose = "xspec", dataset = "Census 2018 (Fair Clusters with SE)")

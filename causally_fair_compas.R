@@ -17,9 +17,9 @@ head(compas_dat)
 
 
 # select training data
-n_samp <- 1500
+n_samp <- 1000
 compas_trn <- head(compas_dat, n = n_samp)
-data_unfair <- compas_trn
+data_unfair <- compas_trn[,c(3,1,2,4:9)]
 
 # Set number of clusters
 num_clusters <- 3
@@ -75,6 +75,9 @@ data_fair$race <- data_unfair$race
 data_fair_se <- compas_ada_se$adapt.train
 data_fair_se$race <- data_unfair$race
 
+data_fair$cluster <- NULL
+data_fair_se$cluster <- NULL
+
 ## Clustering ## 
 
 # Perform vanialla clustering
@@ -82,15 +85,15 @@ result <- kproto(x = data_unfair, k = num_clusters)
 data_unfair$cluster_vanilla <- result$cluster
 
 # Perform fairness through awareness clustering
-result <- kproto(x = data_unfair[,-1], k = num_clusters)
+result <- kproto(x = data_unfair[,-c(1,10)], k = num_clusters)
 data_unfair$cluster_unaware <- result$cluster
 
 # Perform causally fair clustering
-result <- kproto(x = data_fair[-2], k = num_clusters)
+result <- kproto(x = data_fair[-3], k = num_clusters)
 data_fair$cluster_fair <- result$cluster
 
 # Perform causally fair clustering including spurious effect
-result <- kproto(x = data_fair_se[-2], k = num_clusters)
+result <- kproto(x = data_fair_se[-3], k = num_clusters)
 data_fair_se$cluster_fair <- result$cluster
 
 # balanced clustering
@@ -159,11 +162,11 @@ filter_and_assign <- function(data, method) {
 }
 
 # Apply the function to each dataframe
-plot_vals_fair5 <- filter_and_assign(tvd_fair_se$measures, "Causally Fair (SE)")
+plot_vals_fair5 <- filter_and_assign(tvd_fair_se$measures, "Causally Fair (NDE+NIE+SE)")
 plot_vals_fair4 <- filter_and_assign(tvd_fair4$measures, "Balanced")
 plot_vals_fair3 <- filter_and_assign(tvd_fair3$measures, "FtU")
-plot_vals_fair2 <- filter_and_assign(tvd_fair2$measures, "Vanilla")
-plot_vals_fair <- filter_and_assign(tvd_fair$measures, "Causally Fair")
+plot_vals_fair2 <- filter_and_assign(tvd_fair2$measures, "Unadjusted")
+plot_vals_fair <- filter_and_assign(tvd_fair$measures, "Causally Fair (NDE+NIE)")
 
 # Combine all dataframes
 plot_vals <- rbind(plot_vals_fair5, plot_vals_fair4, plot_vals_fair3, plot_vals_fair2, plot_vals_fair)
@@ -176,7 +179,7 @@ my_colors <- c("#D73027", "#117777","#708090","#ABD9E9", "#4575B4")
 # Preprocess the data for plotting
 data_new <- plot_vals
 data_new$measure <- factor(data_new$measure, measures)
-data_new$Method <- factor(data_new$Method, c("Causally Fair", "Causally Fair (SE)", "Balanced", "FtU", "Vanilla"))
+data_new$Method <- factor(data_new$Method, c("Causally Fair (NDE+NIE+SE)", "Causally Fair (NDE+NIE)", "Balanced", "FtU", "Unadjusted"))
 
 
 # Create the plot
