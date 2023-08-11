@@ -6,45 +6,20 @@ library(FairMclus)
 library(dplyr)
 library(ggplot2)
 library(tictoc)
-# library(BalKmeans)
 
 rm(list=ls())
 
-set.seed(12)
+set.seed(1)
 
 # load data
-gov_dat <- get(data("gov_census", package = "fairadapt"))
-head(gov_dat)
+gov_trn <- head(get(data("gov_census", package = "fairadapt")), n = 1000) # due to high computational cost of the balanced clustering algorithm
+head(gov_trn)
 
 # transform salary data to log scale
-gov_dat$salary <- log(gov_dat$salary)
-
-# select training data
-n_samp <- 1000
-gov_trn <- head(gov_dat, n = n_samp)
+gov_trn$salary <- log(gov_trn$salary)
 data_unfair <- gov_trn
 
-# Set number of clusters
-num_clusters <- 2
-
-# # define standard fairness model graph
-# X <- "sex" # protected attribute
-# Z <- c("age", "race", "hispanic_origin", "citizenship", "nativity", 
-#        "economic_region") # confounders
-# W <- c("marital", "family_size", "children", "education_level", "english_level", 
-#        "hours_worked", "weeks_worked", "occupation", "industry", "salary") # mediators
-# Y <- "cluster" # outcome
-# 
-# cols <- c(Z, W, X)
-# 
-# gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
-#                   dimnames = rep(list(cols), 2))
-# 
-# gov_adj[Z, W] <- 1
-# gov_adj[X, W] <- 1
-# gov_cfd[X, Z] <- 1
-# gov_cfd[Z, X] <- 1
-# gov_grph <- graphModel(gov_adj, gov_cfd)
+## DATA ADAPTAION ## 
 
 # define standard fairness model graph
 X <- "sex" # protected attribute
@@ -53,50 +28,31 @@ Z <- c("age", "race", "hispanic_origin", "citizenship", "nativity",
 W <- c("salary", "marital", "family_size", "children", "education_level", "english_level", 
        "hours_worked", "weeks_worked", "occupation", "industry") # mediators
 Y <- "cluster" # outcome
-
-gov_trn$cluster <- 0
-
 cols <- c(Z, W, X, Y)
 
-gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
-                  dimnames = rep(list(cols), 2))
+# add cluster vairable that will be filled later
+gov_trn$cluster <- 0
 
-# gov_cfd <- gov_adj
-
-# gov_adj[Z, c(Y)] <- 1
+# adapt W to minimise the NIE
+# specialise adjacency matrix
+gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols), dimnames = rep(list(cols), 2))
 gov_adj[W, Y] <- 1
 gov_adj[X, W] <- 1
-# gov_adj[X, c(W, Y)] <- 1
-# gov_adj[X, Z] <- 1
-
-# gov_cfd[X, Z] <- 1
-# gov_cfd[Z, X] <- 1
-# gov_grph <- graphModel(gov_adj, gov_cfd)
-
 
 # adapt data
-gov_ada <- fairadapt(cluster ~ ., train.data = gov_trn,
-                     adj.mat = gov_adj, prot.attr = X)
+gov_ada <- fairadapt(cluster ~ ., train.data = gov_trn, adj.mat = gov_adj, prot.attr = X)
 
-# adapt data for spurious effect
-gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols),
-                  dimnames = rep(list(cols), 2))
-
+# adapt W and Z to minimise the NIE and Exp-SE
+# specialise adjacency matrix
+gov_adj <- matrix(0, nrow = length(cols), ncol = length(cols), dimnames = rep(list(cols), 2))
 gov_adj[Z, Y] <- 1
 gov_adj[W, Y] <- 1
-# gov_adj[Z, W] <- 1
 gov_adj[X, c(Z, W)] <- 1
-# gov_adj[X, c(Z, W, Y)] <- 1
-
-# gov_cfd[X, Z] <- 1
-# gov_cfd[Z, X] <- 1
-# gov_grph <- graphModel(gov_adj, gov_cfd)
-
 
 # adapt data
-gov_ada_se <- fairadapt(cluster ~ ., train.data = gov_trn,
-                     adj.mat = gov_adj, prot.attr = X)
+gov_ada_se <- fairadapt(cluster ~ ., train.data = gov_trn, adj.mat = gov_adj, prot.attr = X)
 
+# copy adapted data for clustering
 data_fair <- gov_ada$adapt.train
 data_fair$sex <- data_unfair$sex
 
@@ -106,118 +62,110 @@ data_fair_se$sex <- data_unfair$sex
 data_fair$cluster <- NULL
 data_fair_se$cluster <- NULL
 
-## Clustering ## 
+## CLUSTERING ## 
 
-# Perform vanialla clustering
+# set number of clusters
+num_clusters <- 2
+
+# perform vanialla clustering
 result <- kproto(x = data_unfair, k = num_clusters)
 # data_unfair$cluster_vanilla <- result$cluster
 data_unfair$cluster_vanilla <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
-# Perform fairness through awareness clustering
+# perform fairness through unawareness clustering
 result <- kproto(x = data_unfair[,-c(1,18)], k = num_clusters)
 # data_unfair$cluster_unaware <- result$cluster
 data_unfair$cluster_unaware <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
-# Perform causally fair clustering minimizing NDE and NIE
+# perform causally fair clustering minimizing NDE and NIE
 result <- kproto(x = data_fair[-1], k = num_clusters)
 # data_unfair$cluster_fair <- result$cluster
 data_fair$cluster_fair <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
-# Perform causally fair clustering minimizing NDE, NIE and SE
+# perform causally fair clustering minimizing NDE, NIE and SE
 result <- kproto(x = data_fair_se[-1], k = num_clusters)
 # data_unfair$cluster_fair_se <- result$cluster
 data_fair_se$cluster_fair_se <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
-# balanced clustering
-
-# Convert all character variables to factor and convert all factor variables to integer
+# perform balanced clustering
+# as the input requires a specific format, convert all character and integer variables to factor and convert all factor variables to integer
 df <- as.data.frame(data_unfair[,c(1:17)])
 df[] <- lapply(df, function(x) if(is.character(x)) as.factor(x) else x)
 df[] <- lapply(df, function(x) if(is.factor(x)) as.integer(x) else x)
-# Convert all integer variables to factor and convert all factor variables to integer
 df[] <- lapply(df, function(x) if(is.integer(x)) as.factor(x) else x)
 df[] <- lapply(df, function(x) if(is.factor(x)) as.integer(x) else x)
-
-df_test <- df
-df_temp <- cbind(1:nrow(df_test), df_test)
+df_temp <- cbind(1:nrow(df), df)
 colnames(df_temp) <- paste0("V", 1:ncol(df_temp)-1)
 transformed_data <- as.matrix(df_temp)
 
-# temp_results <- balance_cluster(transformed_data[,-c(1:2)], transformed_data[,2], num_clusters)
-# data_unfair$cluster_balanced <- temp_results$cluster
-
-tic()
+tic() # this algorithm is computationally very expensive, hence we measure the time
 result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=4, kclus=num_clusters, numpos=c(2,8,9,10,11,12,13,14))
-# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(2:14))
-# result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=0, kclus=num_clusters, numpos=c(12))
-# result <- FairMclus::FairMclus(f=transformed_data, typedata="c", protected="V1", ncores=0, kclus=num_clusters, numpos=c(0))
 toc()
-data_unfair$cluster_balanced <- result$cluster
+# data_unfair$cluster_balanced <- result$cluster
+data_unfair$cluster_balanced <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # calculate fairness measures
 
 # causally fair clustering
 tvd_fair <- fairness_cookbook(data = data_fair, X = X, W = W, Z = Z, Y = "cluster_fair", 
                               x0 = "female", x1 = "male", nboot1=5)
-# visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018 (Fair Clusters)")
+# # visualize the x-specific measures of direct, indirect, and spurious effect
+# autoplot(tvd_fair, decompose = "xspec", dataset = "Census 2018 (Fair Clusters)")
 
 # causally fair clustering with spurious effect
 tvd_fair_se <- fairness_cookbook(data = data_fair_se, X = X, W = W, Z = Z, Y = "cluster_fair_se", 
                                  x0 = "female", x1 = "male", nboot1=5)
-# visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair_se, decompose = "xspec", dataset = "Census 2018 (Fair Clusters with SE)")
+# # visualize the x-specific measures of direct, indirect, and spurious effect
+# autoplot(tvd_fair_se, decompose = "xspec", dataset = "Census 2018 (Fair Clusters with SE)")
 
 # vanialla clustering
 tvd_fair2 <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = "cluster_vanilla", 
                                x0 = "female", x1 = "male", nboot1=5)
-# visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair2, decompose = "xspec", dataset = "Census 2018 (naive vanilla clustering)")
+# # visualize the x-specific measures of direct, indirect, and spurious effect
+# autoplot(tvd_fair2, decompose = "xspec", dataset = "Census 2018 (naive vanilla clustering)")
 
 # fairness through unawareness
 tvd_fair3 <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = "cluster_unaware", 
                                x0 = "female", x1 = "male", nboot1=5)
-# visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair3, decompose = "xspec", dataset = "Census 2018 (Neglecting Sex)")
+# # visualize the x-specific measures of direct, indirect, and spurious effect
+# autoplot(tvd_fair3, decompose = "xspec", dataset = "Census 2018 (Neglecting Sex)")
 
 # fairness through balanced clusters
 tvd_fair4 <- fairness_cookbook(data = data_unfair, X = X, W = W, Z = Z, Y = "cluster_balanced", 
                                x0 = "female", x1 = "male", nboot1=5)
-# visualize the x-specific measures of direct, indirect, and spurious effect
-autoplot(tvd_fair4, decompose = "xspec", dataset = "Census 2018 (Balanced Clusters)")
+# # visualize the x-specific measures of direct, indirect, and spurious effect
+# autoplot(tvd_fair4, decompose = "xspec", dataset = "Census 2018 (Balanced Clusters)")
 
-# Define the measures of interest
+# define the measures of interest
 measures <- c("tv", "ctfde", "ctfie", "ctfse")
 
-# Create a function to filter the measures and assign the method
+# create a function to filter the measures and assign the method
 filter_and_assign <- function(data, method) {
   data <- data[data$measure %in% measures, ]
   data$Method <- method
   return(data)
 }
 
-# Apply the function to each dataframe
+# apply the function to each dataframe
 plot_vals_fair5 <- filter_and_assign(tvd_fair_se$measures, "Causally Fair (NDE+NIE+SE)")
 plot_vals_fair4 <- filter_and_assign(tvd_fair4$measures, "Balanced")
 plot_vals_fair3 <- filter_and_assign(tvd_fair3$measures, "FTU")
 plot_vals_fair2 <- filter_and_assign(tvd_fair2$measures, "Unadjusted")
 plot_vals_fair <- filter_and_assign(tvd_fair$measures, "Causally Fair (NDE+NIE)")
 
-# Combine all dataframes
+# combine all dataframes
 plot_vals <- rbind(plot_vals_fair5, plot_vals_fair4, plot_vals_fair3, plot_vals_fair2, plot_vals_fair)
 
-# Define color scheme
-# my_colors <- c("#D73027","#ABD9E9", "#4575B4")
-# my_colors <- c("#D73027", "#FDAE61","#ABD9E9","#708090", "#4575B4")
+# define color scheme
 my_colors <- c("#D73027", "#117777","#708090","#ABD9E9", "#4575B4")
 
 
-# Preprocess the data for plotting
+# preprocess the data for plotting
 data_new <- plot_vals
 data_new$measure <- factor(data_new$measure, measures)
 data_new$Method <- factor(data_new$Method, c("Causally Fair (NDE+NIE+SE)", "Causally Fair (NDE+NIE)", "Balanced", "FTU", "Unadjusted"))
 
-# Create the plot
+# create the plot
 p1 <- data_new %>%
   ggplot( aes(x=measure, y=value, fill=Method, colour=Method)) +
   geom_boxplot(outlier.shape = NA, alpha = 0.3) +
@@ -229,8 +177,9 @@ p1 <- data_new %>%
   xlab("Fairness Measure")+
   ylab("Value"); p1
 
-saveRDS(data_new, "results/census.rds")
+# saveRDS(data_new, "results/census.rds")
 
+# Plot as PDF
 # library("extrafont")
 # loadfonts()
 # pdf("~/Desktop/gov_census_plot.pdf", height = 3.7, width = 6,
