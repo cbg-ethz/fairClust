@@ -8,7 +8,7 @@ library(ggplot2)
 library(tictoc)
 
 rm(list=ls())
-set.seed(2)
+set.seed(111)
 
 # load data
 compas_dat <- get(data("compas", package = "fairadapt"))
@@ -161,7 +161,6 @@ my_colors <- c("#D73027", "#117777","#708090","#ABD9E9", "#4575B4")
 data_new <- plot_vals
 data_new$measure <- factor(data_new$measure, measures)
 data_new$Method <- factor(data_new$Method, c("Causally Fair (NDE+NIE+SE)", "Causally Fair (NDE+NIE)", "Balanced", "FTU", "Unadjusted"))
-
 
 # create the plot
 p1 <- data_new %>%

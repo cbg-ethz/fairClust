@@ -9,7 +9,7 @@ library(tictoc)
 
 rm(list=ls())
 
-set.seed(1)
+set.seed(111)
 
 # load data
 gov_trn <- head(get(data("gov_census", package = "fairadapt")), n = 1000) # due to high computational cost of the balanced clustering algorithm
@@ -179,13 +179,3 @@ p1 <- data_new %>%
 
 # saveRDS(data_new, "results/census.rds")
 
-# Plot as PDF
-# library("extrafont")
-# loadfonts()
-# pdf("~/Desktop/gov_census_plot.pdf", height = 3.7, width = 6,
-#     family = "Arial", paper = "special", onefile = FALSE)
-# # family = "Times New Roman", paper = "special", onefile = FALSE)
-# op <- par(mar = c(5, 4, 0.05, 0.05) + 0.1)
-# p1
-# par(op)
-# dev.off()
