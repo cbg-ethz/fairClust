@@ -65,22 +65,22 @@ num_clusters <- 2
 
 # perform vanialla clustering
 result <- kproto(x = data_unfair, k = num_clusters)
-# data_unfair$cluster_vanilla <- result$cluster
+# data_unfair$cluster_vanilla <- result$cluster # for num_clusters higher than 2
 data_unfair$cluster_vanilla <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # perform fairness through unawareness clustering
 result <- kproto(x = data_unfair[,-c(1,10)], k = num_clusters)
-# data_unfair$cluster_unaware <- result$cluster
+# data_unfair$cluster_unaware <- result$cluster # for num_clusters higher than 2
 data_unfair$cluster_unaware <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # perform causally fair clustering
 result <- kproto(x = data_fair[-3], k = num_clusters)
-# data_unfair$cluster_fair <- result$cluster
+# data_unfair$cluster_fair <- result$cluster # for num_clusters higher than 2
 data_fair$cluster_fair <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # perform causally fair clustering including spurious effect
 result <- kproto(x = data_fair_se[-3], k = num_clusters)
-# data_unfair$cluster_fair_se <- result$cluster
+# data_unfair$cluster_fair_se <- result$cluster # for num_clusters higher than 2
 data_fair_se$cluster_fair_se <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # perform balanced clustering
@@ -98,7 +98,7 @@ transformed_data <- as.matrix(df_temp)
 tic() # this algorithm is computationally very expensive, hence we measure the time
 result <- FairMclus::FairMclus(f=transformed_data, typedata="m", protected="V1", ncores=4, kclus=num_clusters, numpos=c(2,7))
 toc()
-# data_unfair$cluster_balanced <- result$cluster
+# data_unfair$cluster_balanced <- result$cluster # for num_clusters higher than 2
 data_unfair$cluster_balanced <- factor(as.factor(result$cluster), labels = LETTERS[1:length(unique(result$cluster))])
 
 # calculate fairness measures
