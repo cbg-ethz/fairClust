@@ -8,7 +8,7 @@ library(ggplot2)
 library(tictoc)
 
 rm(list=ls())
-set.seed(111)
+set.seed(11)
 
 # load data
 compas_dat <- get(data("compas", package = "fairadapt"))

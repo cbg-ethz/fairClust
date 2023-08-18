@@ -9,7 +9,7 @@ library(tictoc)
 
 rm(list=ls())
 
-set.seed(5)
+set.seed(22)
 
 # load data
 gov_trn <- head(get(data("gov_census", package = "fairadapt")), n = 1000) # due to high computational cost of the balanced clustering algorithm
